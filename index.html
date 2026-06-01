@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>SF Measurer</title>
+<meta name="description" content="SmartFilm Field Measurement Tool">
+<meta name="theme-color" content="#00C8FF">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj4KICA8cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjQwIiBmaWxsPSIjMDgwQjEwIi8+CiAgPHJlY3QgeD0iNiIgeT0iNiIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIxODAiIHJ4PSIzNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBDOEZGIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuMyIvPgogIDwhLS0gUnVsZXIgbWFya3MgLS0+CiAgPGxpbmUgeDE9IjMyIiB5MT0iNDgiIHgyPSIxNjAiIHkyPSI0OCIgc3Ryb2tlPSIjMDBDOEZGIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuMTUiLz4KICA8bGluZSB4MT0iMzIiIHkxPSIxNDQiIHgyPSIxNjAiIHkyPSIxNDQiIHN0cm9rZT0iIzAwQzhGRiIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjE1Ii8+CiAgPGxpbmUgeDE9IjMyIiB5MT0iNDgiIHgyPSIzMiIgeTI9IjE0NCIgc3Ryb2tlPSIjMDBDOEZGIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuMTUiLz4KICA8bGluZSB4MT0iMTYwIiB5MT0iNDgiIHgyPSIxNjAiIHkyPSIxNDQiIHN0cm9rZT0iIzAwQzhGRiIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjE1Ii8+CiAgPCEtLSBXaW5kb3cgc2hhcGUgLS0+CiAgPHJlY3QgeD0iNDQiIHk9IjU2IiB3aWR0aD0iMTA0IiBoZWlnaHQ9IjgwIiByeD0iNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDAsMjAwLDI1NSwwLjYpIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8bGluZSB4MT0iOTYiIHkxPSI1NiIgeDI9Ijk2IiB5Mj0iMTM2IiBzdHJva2U9InJnYmEoMCwyMDAsMjU1LDAuMykiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGxpbmUgeDE9IjQ0IiB5MT0iOTYiIHgyPSIxNDgiIHkyPSI5NiIgc3Ryb2tlPSJyZ2JhKDAsMjAwLDI1NSwwLjMpIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDwhLS0gTWVhc3VyZW1lbnQgYXJyb3dzIC0tPgogIDxsaW5lIHgxPSIyMiIgeTE9IjU2IiB4Mj0iMjIiIHkyPSIxMzYiIHN0cm9rZT0iIzAwQzhGRiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIyMiw1MiAxOCw2MiAyNiw2MiIgZmlsbD0iIzAwQzhGRiIvPgogIDxwb2x5Z29uIHBvaW50cz0iMjIsMTQwIDE4LDEzMCAyNiwxMzAiIGZpbGw9IiMwMEM4RkYiLz4KICA8bGluZSB4MT0iNDQiIHkxPSIxNTIiIHgyPSIxNDgiIHkyPSIxNTIiIHN0cm9rZT0iIzAwQzhGRiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI0MCwxNTIgNTAsMTQ4IDUwLDE1NiIgZmlsbD0iIzAwQzhGRiIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTUyLDE1MiAxNDIsMTQ4IDE0MiwxNTYiIGZpbGw9IiMwMEM4RkYiLz4KICA8IS0tIFNGIHRleHQgLS0+CiAgPHRleHQgeD0iOTYiIHk9IjE3NSIgZm9udC1mYW1pbHk9IidSYWpkaGFuaScsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzAwQzhGRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiPk1FQVNVUkU8L3RleHQ+Cjwvc3ZnPg==">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj4KICA8cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjQwIiBmaWxsPSIjMDgwQjEwIi8+CiAgPHJlY3QgeD0iNiIgeT0iNiIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIxODAiIHJ4PSIzNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBDOEZGIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuMyIvPgogIDwhLS0gUnVsZXIgbWFya3MgLS0+CiAgPGxpbmUgeDE9IjMyIiB5MT0iNDgiIHgyPSIxNjAiIHkyPSI0OCIgc3Ryb2tlPSIjMDBDOEZGIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuMTUiLz4KICA8bGluZSB4MT0iMzIiIHkxPSIxNDQiIHgyPSIxNjAiIHkyPSIxNDQiIHN0cm9rZT0iIzAwQzhGRiIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjE1Ii8+CiAgPGxpbmUgeDE9IjMyIiB5MT0iNDgiIHgyPSIzMiIgeTI9IjE0NCIgc3Ryb2tlPSIjMDBDOEZGIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuMTUiLz4KICA8bGluZSB4MT0iMTYwIiB5MT0iNDgiIHgyPSIxNjAiIHkyPSIxNDQiIHN0cm9rZT0iIzAwQzhGRiIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjE1Ii8+CiAgPCEtLSBXaW5kb3cgc2hhcGUgLS0+CiAgPHJlY3QgeD0iNDQiIHk9IjU2IiB3aWR0aD0iMTA0IiBoZWlnaHQ9IjgwIiByeD0iNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDAsMjAwLDI1NSwwLjYpIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8bGluZSB4MT0iOTYiIHkxPSI1NiIgeDI9Ijk2IiB5Mj0iMTM2IiBzdHJva2U9InJnYmEoMCwyMDAsMjU1LDAuMykiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGxpbmUgeDE9IjQ0IiB5MT0iOTYiIHgyPSIxNDgiIHkyPSI5NiIgc3Ryb2tlPSJyZ2JhKDAsMjAwLDI1NSwwLjMpIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDwhLS0gTWVhc3VyZW1lbnQgYXJyb3dzIC0tPgogIDxsaW5lIHgxPSIyMiIgeTE9IjU2IiB4Mj0iMjIiIHkyPSIxMzYiIHN0cm9rZT0iIzAwQzhGRiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIyMiw1MiAxOCw2MiAyNiw2MiIgZmlsbD0iIzAwQzhGRiIvPgogIDxwb2x5Z29uIHBvaW50cz0iMjIsMTQwIDE4LDEzMCAyNiwxMzAiIGZpbGw9IiMwMEM4RkYiLz4KICA8bGluZSB4MT0iNDQiIHkxPSIxNTIiIHgyPSIxNDgiIHkyPSIxNTIiIHN0cm9rZT0iIzAwQzhGRiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI0MCwxNTIgNTAsMTQ4IDUwLDE1NiIgZmlsbD0iIzAwQzhGRiIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTUyLDE1MiAxNDIsMTQ4IDE0MiwxNTYiIGZpbGw9IiMwMEM4RkYiLz4KICA8IS0tIFNGIHRleHQgLS0+CiAgPHRleHQgeD0iOTYiIHk9IjE3NSIgZm9udC1mYW1pbHk9IidSYWpkaGFuaScsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzAwQzhGRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjMiPk1FQVNVUkU8L3RleHQ+Cjwvc3ZnPg==">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="SF Measure">
+<link rel="manifest" href="data:application/json;charset=utf-8,%7B%22name%22%3A%22SmartFilm+Measurer%22%2C%22short_name%22%3A%22SF+Measure%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23080B10%22%2C%22theme_color%22%3A%22%2300C8FF%22%2C%22orientation%22%3A%22any%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADsQAAA7EB9YPtSQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZxjeCg0AAAXeSURBVHic7Z1biFVVGMd%2Fe2bGGTPTzFI0zTIVNS%2BjZhfLTDMVLcvKNC9Z2YWiiyVhRVGRlVRkJRWZSUVWUpGVVGQlFVlJRVZSkZVUZCUVWUlFVlKRlVRkJRVZSUVWUpGVVGQlFVlJRVZSkZVUZCUVWUlFVlKRlVRkJRVZSUVWUpGVVGQlFVlJRVZSkZVU%2FAAA%2F%2F8DAKuFb4sAAAAASUVORK5CYII%3D%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fpng%22%7D%5D%7D">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#080B10;--bg2:#0F1319;--bg3:#161C26;--bg4:#1E2535;
+  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.14);
+  --text:#E6EAF2;--muted:#4E5A6E;--muted2:#7A8899;
+  --accent:#00C8FF;--green:#00E599;--red:#FF3D5A;
+  --yellow:#FFB020;--purple:#9D5CF6;--orange:#FF6B35;
+  --smart:#00C8FF;--protect:#00E599;--solar:#FFB020;--elec:#9D5CF6;
+  --radius:10px;
+}
+html,body{height:100%;overflow:hidden}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;display:flex;flex-direction:column}
+
+/* ── HEADER ── */
+.hdr{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 16px;height:52px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;gap:10px}
+.logo{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;letter-spacing:2px;color:var(--accent);white-space:nowrap}
+.logo em{color:var(--text);opacity:.45;font-style:normal}
+.hdr-right{display:flex;align-items:center;gap:6px}
+.chip{font-family:'IBM Plex Mono',monospace;font-size:9px;background:var(--bg3);border:1px solid var(--border);padding:3px 8px;border-radius:4px;color:var(--muted2)}
+
+/* ── STEP TABS ── */
+.steps{display:flex;background:var(--bg2);border-bottom:1px solid var(--border);flex-shrink:0;overflow-x:auto;scrollbar-width:none}
+.steps::-webkit-scrollbar{display:none}
+.step{display:flex;align-items:center;gap:6px;padding:12px 16px;font-size:11px;font-weight:600;color:var(--muted2);cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all .18s}
+.step.on{color:var(--accent);border-bottom-color:var(--accent);background:rgba(0,200,255,.04)}
+.step-dot{width:18px;height:18px;border-radius:50%;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:9px;font-family:'IBM Plex Mono',monospace;flex-shrink:0}
+.step.on .step-dot{background:var(--accent);color:#000}
+.step.done .step-dot{background:var(--green);color:#000}
+.step.done{color:var(--green)}
+
+/* ── BODY ── */
+.body{display:flex;flex:1;overflow:hidden}
+
+/* ── SIDEBAR ── */
+.sb{width:260px;background:var(--bg2);border-right:1px solid var(--border);overflow-y:auto;padding:14px;flex-shrink:0}
+@media(max-width:800px){.sb{display:none}}
+.sb-h{font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--border)}
+.sb-room{background:var(--bg3);border:1px solid var(--border);border-radius:7px;padding:9px 11px;margin-bottom:5px;cursor:pointer;transition:all .14s}
+.sb-room:hover,.sb-room.on{border-color:var(--accent);background:rgba(0,200,255,.05)}
+.sb-room.on{border-left:3px solid var(--accent)}
+.sb-rname{font-size:12px;font-weight:600}
+.sb-rmeta{font-size:10px;color:var(--muted2);margin-top:2px}
+.sb-stat{display:flex;justify-content:space-between;font-size:11px;padding:4px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+.sb-stat:last-child{border:none}
+.sb-val{font-family:'IBM Plex Mono',monospace;color:var(--accent)}
+
+/* ── CONTENT ── */
+.content{flex:1;overflow-y:auto;padding:16px;background:var(--bg)}
+
+/* ── CARDS ── */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden}
+.ch{padding:12px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.ct{font-size:12px;font-weight:700;display:flex;align-items:center;gap:7px}
+.cb{padding:14px}
+
+/* ── FORMS ── */
+.fg{display:grid;gap:9px}
+.f2{grid-template-columns:1fr 1fr}
+.f3{grid-template-columns:1fr 1fr 1fr}
+.f4{grid-template-columns:1fr 1fr 1fr 1fr}
+.fl{display:flex;flex-direction:column;gap:4px}
+label{font-size:9px;font-weight:700;color:var(--muted2);text-transform:uppercase;letter-spacing:.6px;font-family:'IBM Plex Mono',monospace}
+input,select,textarea{background:var(--bg3);border:1px solid var(--border2);border-radius:6px;padding:8px 11px;color:var(--text);font-size:12px;font-family:'Inter',sans-serif;outline:none;transition:border-color .14s;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--accent)}
+select option{background:var(--bg2)}
+input[type=number]{font-family:'IBM Plex Mono',monospace;font-weight:500}
+
+/* ── BUTTONS ── */
+.btn{cursor:pointer;border-radius:6px;border:1px solid var(--border2);background:var(--bg3);padding:7px 13px;font-size:11px;font-weight:600;color:var(--text);transition:all .14s;font-family:'Inter',sans-serif;display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.btn:hover{background:var(--bg4)}
+.ba{background:rgba(0,200,255,.13);border-color:rgba(0,200,255,.35);color:var(--accent)}
+.ba:hover{background:rgba(0,200,255,.22)}
+.bg{background:rgba(0,229,153,.1);border-color:rgba(0,229,153,.3);color:var(--green)}
+.br{background:rgba(255,61,90,.08);border-color:rgba(255,61,90,.25);color:var(--red)}
+.by{background:rgba(255,176,32,.08);border-color:rgba(255,176,32,.25);color:var(--yellow)}
+.bp{background:rgba(157,92,246,.1);border-color:rgba(157,92,246,.3);color:var(--purple)}
+.bsm{padding:4px 9px;font-size:10px}
+.blg{width:100%;justify-content:center;padding:10px;font-size:13px}
+
+/* ── FILM BADGES ── */
+.fb{display:inline-flex;align-items:center;gap:3px;padding:2px 7px;border-radius:4px;font-size:9px;font-weight:700;font-family:'IBM Plex Mono',monospace}
+.fb-smart{background:rgba(0,200,255,.12);color:var(--smart);border:1px solid rgba(0,200,255,.3)}
+.fb-protect{background:rgba(0,229,153,.1);color:var(--protect);border:1px solid rgba(0,229,153,.25)}
+.fb-solar{background:rgba(255,176,32,.08);color:var(--solar);border:1px solid rgba(255,176,32,.25)}
+.fb-none{background:rgba(255,255,255,.04);color:var(--muted2);border:1px solid var(--border)}
+
+/* ── WINDOW TYPES ── */
+.wt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px}
+.wt-btn{border-radius:8px;border:1px solid var(--border2);background:var(--bg3);padding:8px 4px;cursor:pointer;text-align:center;transition:all .14s}
+.wt-btn:hover,.wt-btn.on{border-color:var(--accent);background:rgba(0,200,255,.08)}
+.wt-icon{font-size:22px;margin-bottom:3px}
+.wt-label{font-size:9px;color:var(--muted2);font-weight:600}
+
+/* ── COMPASS ── */
+.compass-wrap{position:relative;width:120px;height:120px;flex-shrink:0;user-select:none}
+.compass-svg{display:block;width:120px;height:120px;cursor:pointer;touch-action:none}
+.compass-label{text-align:center;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:700;color:var(--accent);margin-top:4px;letter-spacing:1px}
+
+/* ── FILM SELECTOR ── */
+.film-sel{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
+.film-opt{padding:6px 10px;border-radius:6px;border:1px solid var(--border2);background:var(--bg3);cursor:pointer;font-size:11px;font-weight:600;color:var(--muted2);transition:all .14s;display:flex;align-items:center;gap:4px}
+.film-opt.on.smart{border-color:var(--smart);background:rgba(0,200,255,.12);color:var(--smart)}
+.film-opt.on.protect{border-color:var(--protect);background:rgba(0,229,153,.1);color:var(--protect)}
+.film-opt.on.solar{border-color:var(--solar);background:rgba(255,176,32,.08);color:var(--solar)}
+.film-opt.on.none{border-color:var(--muted2);background:rgba(255,255,255,.05);color:var(--muted2)}
+
+/* ── ZONE CARD ── */
+.zone-card{background:var(--bg4);border:1px solid rgba(157,92,246,.25);border-radius:7px;padding:10px;margin-top:6px}
+.zone-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.zone-id{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--purple);font-weight:600}
+
+/* ── WINDOW CARD ── */
+.win-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:8px;position:relative}
+.win-card.smart{border-left:3px solid var(--smart)}
+.win-card.protect{border-left:3px solid var(--protect)}
+.win-card.solar{border-left:3px solid var(--solar)}
+.win-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.win-id{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--accent);font-weight:600}
+
+/* ── DRAWING CANVAS ── */
+.draw-wrap{background:var(--bg3);border-radius:10px;border:1px solid var(--border);overflow:hidden;margin-bottom:10px}
+.draw-wrap svg{display:block;width:100%;height:auto}
+
+/* ── PHOTO GRID ── */
+.photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px;margin-top:10px}
+.photo-thumb{position:relative;aspect-ratio:1;border-radius:7px;overflow:hidden;border:1px solid var(--border)}
+.photo-thumb img{width:100%;height:100%;object-fit:cover}
+.photo-del{position:absolute;top:4px;right:4px;width:20px;height:20px;border-radius:50%;background:rgba(0,0,0,.7);border:none;color:#fff;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.photo-add{aspect-ratio:1;border-radius:7px;border:2px dashed var(--border2);display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;color:var(--muted2);font-size:10px;gap:4px;transition:all .14s;background:var(--bg3)}
+.photo-add:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ── SIGNATURE ── */
+#sig-canvas{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;cursor:crosshair;touch-action:none;display:block;width:100%}
+
+/* ── SUMMARY TABLE ── */
+.tbl{width:100%;border-collapse:collapse}
+.tbl th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;padding:8px 10px;border-bottom:1px solid var(--border)}
+.tbl td{padding:7px 10px;font-size:11px;border-bottom:1px solid rgba(255,255,255,.025)}
+.tbl tr:hover td{background:rgba(255,255,255,.015)}
+.mono{font-family:'IBM Plex Mono',monospace;font-weight:500}
+
+/* ── ALERT ── */
+.alert{border-radius:7px;padding:9px 13px;font-size:11px;margin-bottom:10px;line-height:1.5}
+.ai{background:rgba(0,200,255,.07);border:1px solid rgba(0,200,255,.2);color:rgba(0,200,255,.9)}
+.ag{background:rgba(0,229,153,.07);border:1px solid rgba(0,229,153,.2);color:var(--green)}
+.aw{background:rgba(255,176,32,.07);border:1px solid rgba(255,176,32,.2);color:var(--yellow)}
+
+/* ── KPI ── */
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.kpi{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 12px;border-top:2px solid var(--kc)}
+.kpiv{font-family:'IBM Plex Mono',monospace;font-size:18px;font-weight:600;color:var(--kc)}
+.kpil{font-size:9px;color:var(--muted2);margin-top:2px}
+
+/* ── PAGES ── */
+.pg{display:none}.pg.on{display:block}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+::-webkit-scrollbar-track{background:transparent}
+
+/* ── FILM LEVEL SELECTOR ── */
+.level-tabs{display:flex;gap:4px;margin-bottom:12px;padding:4px;background:var(--bg3);border-radius:8px;border:1px solid var(--border)}
+.lvl-btn{flex:1;padding:7px 6px;border-radius:6px;border:none;background:transparent;color:var(--muted2);font-size:11px;font-weight:600;cursor:pointer;transition:all .14s;font-family:'Inter',sans-serif}
+.lvl-btn.on{background:var(--bg2);color:var(--accent);box-shadow:0 0 0 1px rgba(0,200,255,.3)}
+
+/* ── MOBILE ── */
+@media(max-width:600px){
+  .f2,.f3,.f4{grid-template-columns:1fr 1fr}
+  .kpi-row{grid-template-columns:1fr 1fr}
+  .wt-grid{grid-template-columns:repeat(4,1fr)}
+}
+
+/* ── PRINT ── */
+@media print{
+  body{overflow:visible;background:#fff;color:#000}
+  .hdr,.steps,.sb,.btn,.bsm{display:none!important}
+  .body{display:block}
+  .content{overflow:visible;padding:0}
+  .card{border:1px solid #ddd;break-inside:avoid;background:#fff}
+  .draw-wrap{border:1px solid #ccc}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="hdr">
+  <div class="logo">SF<em>·</em>MEASURE</div>
+  <div class="hdr-right">
+    <div class="chip" id="hdr-job">New Project</div>
+    <button class="btn bsm ba" onclick="exportJSON()">↓ JSON</button>
+    <button class="btn bsm bg" onclick="saveLocal()">💾</button>
+    <button class="btn bsm" onclick="loadLocal()">📂</button>
+    <input type="file" id="lf" accept=".json" style="display:none" onchange="loadFile(event)">
+  </div>
+</div>
+
+<!-- STEP TABS -->
+<div class="steps" id="steps-bar">
+  <div class="step on" data-tab="info" onclick="go('info',this)">
+    <div class="step-dot" id="sd-info">1</div> Project Info
+  </div>
+  <div class="step" data-tab="rooms" onclick="go('rooms',this)">
+    <div class="step-dot" id="sd-rooms">2</div> Rooms & Windows
+  </div>
+  <div class="step" data-tab="electric" onclick="go('electric',this)">
+    <div class="step-dot" id="sd-electric">3</div> Electrical
+  </div>
+  <div class="step" data-tab="drawings" onclick="go('drawings',this)">
+    <div class="step-dot" id="sd-drawings">4</div> Drawings
+  </div>
+  <div class="step" data-tab="photos" onclick="go('photos',this)">
+    <div class="step-dot" id="sd-photos">5</div> Photos
+  </div>
+  <div class="step" data-tab="sign" onclick="go('sign',this)">
+    <div class="step-dot" id="sd-sign">6</div> Sign & Export
+  </div>
+</div>
+
+<div class="body">
+  <!-- SIDEBAR -->
+  <div class="sb" id="sidebar">
+    <div style="margin-bottom:14px">
+      <div class="sb-h">Project</div>
+      <div style="font-size:12px;font-weight:600" id="sb-name">—</div>
+      <div style="font-size:10px;color:var(--muted2);margin-top:2px" id="sb-client">—</div>
+    </div>
+    <div style="margin-bottom:14px">
+      <div class="sb-h">Rooms <button class="btn bsm ba" onclick="addRoom()" style="margin-left:6px">+</button></div>
+      <div id="sb-rooms"></div>
+    </div>
+    <div>
+      <div class="sb-h">Totals</div>
+      <div id="sb-totals" style="font-size:11px;line-height:1.9;color:var(--muted2)">—</div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- ══ INFO ══ -->
+    <div class="pg on" id="pg-info">
+      <div class="card">
+        <div class="ch"><div class="ct">📋 Project Information</div></div>
+        <div class="cb">
+          <div class="fg f2">
+            <div class="fl"><label>Job # / Order ID</label><input id="p_num" placeholder="SF-2025-001" oninput="syncInfo()"></div>
+            <div class="fl"><label>Measure Date</label><input id="p_date" type="date" oninput="syncInfo()"></div>
+            <div class="fl"><label>Property Name / Address</label><input id="p_name" placeholder="123 Main St, LA, CA" oninput="syncInfo()"></div>
+            <div class="fl"><label>Measurer Name</label><input id="p_msr" placeholder="Your name" oninput="syncInfo()"></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ch"><div class="ct">👤 Client</div></div>
+        <div class="cb">
+          <div class="fg f2">
+            <div class="fl"><label>Client Name / Company</label><input id="c_name" placeholder="John Smith / Acme Corp" oninput="syncInfo()"></div>
+            <div class="fl"><label>Phone</label><input id="c_phone" placeholder="(310) 000-0000" oninput="syncInfo()"></div>
+            <div class="fl"><label>Email</label><input id="c_email" placeholder="client@email.com" oninput="syncInfo()"></div>
+            <div class="fl"><label>Property Type</label>
+              <select id="c_type" oninput="syncInfo()">
+                <option>Residential</option><option>Commercial Office</option>
+                <option>Retail</option><option>Hotel / Hospitality</option>
+                <option>Healthcare</option><option>Industrial</option><option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="fl" style="margin-top:8px"><label>Special Notes / Access Instructions</label>
+            <textarea id="c_note" rows="2" placeholder="Gate code, parking, special instructions..." oninput="syncInfo()"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ch"><div class="ct">🎬 Default Film — Project Level</div>
+          <span style="font-size:10px;color:var(--muted2)">Can override per room or per window</span>
+        </div>
+        <div class="cb">
+          <div class="alert ai" style="margin-bottom:12px">Set a default film for the whole project. You can override it per room or per individual window.</div>
+          <div class="film-sel" id="proj-film-sel">
+            <div class="film-opt on smart" data-film="smart" onclick="setProjectFilm(this,'smart')">⚡ Smart (PDLC)</div>
+            <div class="film-opt protect" data-film="protect" onclick="setProjectFilm(this,'protect')">🛡 Safety Film</div>
+            <div class="film-opt solar" data-film="solar" onclick="setProjectFilm(this,'solar')">☀️ Solar Control</div>
+            <div class="film-opt none" data-film="none" onclick="setProjectFilm(this,'none')">— No Default</div>
+          </div>
+        </div>
+      </div>
+      <button class="btn ba blg" onclick="go('rooms',document.querySelector('[data-tab=rooms]'))">Next: Add Rooms & Windows →</button>
+    </div>
+
+    <!-- ══ ROOMS ══ -->
+    <div class="pg" id="pg-rooms">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <div style="font-size:13px;font-weight:700">Rooms & Windows</div>
+        <button class="btn ba" onclick="addRoom()">+ Add Room</button>
+      </div>
+      <div id="rooms-wrap">
+        <div style="text-align:center;padding:50px;color:var(--muted)">
+          <div style="font-size:40px;margin-bottom:10px">🏠</div>
+          <div style="font-size:13px;font-weight:600;margin-bottom:6px">No rooms yet</div>
+          <button class="btn ba" onclick="addRoom()">+ Add First Room</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ ELECTRICAL ══ -->
+    <div class="pg" id="pg-electric">
+      <div id="elec-wrap">
+        <div class="alert ai">Electrical data is auto-generated from Smart (PDLC) film zones.</div>
+      </div>
+    </div>
+
+    <!-- ══ DRAWINGS ══ -->
+    <div class="pg" id="pg-drawings">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <div style="font-size:13px;font-weight:700">Floor Plan Drawings</div>
+        <button class="btn ba" onclick="window.print()">🖨 Print / PDF</button>
+      </div>
+      <div id="drawings-wrap">
+        <div class="alert ai">Add rooms and windows to generate drawings.</div>
+      </div>
+    </div>
+
+    <!-- ══ PHOTOS ══ -->
+    <div class="pg" id="pg-photos">
+      <div class="card">
+        <div class="ch"><div class="ct">📷 Site Photos</div>
+          <label class="btn ba bsm" style="cursor:pointer">+ Add Photos
+            <input type="file" accept="image/*" multiple style="display:none" onchange="addPhotos(event)">
+          </label>
+        </div>
+        <div class="cb">
+          <div class="alert ai">Take photos of each room, window, and any installation challenges.</div>
+          <div class="photo-grid" id="photo-grid">
+            <label class="photo-add">
+              <input type="file" accept="image/*" multiple style="display:none" onchange="addPhotos(event)">
+              <div style="font-size:28px">📷</div>
+              <div>Tap to add</div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ SIGN ══ -->
+    <div class="pg" id="pg-sign">
+      <div class="card">
+        <div class="ch"><div class="ct">✍️ Measurer Signature</div></div>
+        <div class="cb">
+          <div style="font-size:11px;color:var(--muted2);margin-bottom:8px">Sign below to confirm measurement accuracy</div>
+          <canvas id="sig-canvas" width="600" height="160"></canvas>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn br bsm" onclick="clearSig()">Clear</button>
+            <button class="btn bg bsm" onclick="saveSig()">Save Signature</button>
+          </div>
+          <div style="margin-top:6px;font-size:10px;color:var(--muted2)" id="sig-status">Not signed</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ch"><div class="ct">📤 Export to CRM</div></div>
+        <div class="cb">
+          <div id="export-summary" style="font-size:12px;color:var(--muted2);margin-bottom:14px;line-height:1.7">—</div>
+          <div class="fg f2">
+            <button class="btn ba blg" onclick="exportJSON()">↓ Export JSON for CRM</button>
+            <button class="btn bg blg" onclick="window.print()">🖨 Print Drawings</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /body -->
+
+<script>
+// ══════════════════════════════════════════
+//  DATA
+// ══════════════════════════════════════════
+let D = {
+  version: '2.0',
+  job: { num:'', date: new Date().toISOString().slice(0,10), name:'', measurer:'' },
+  client: { name:'', phone:'', email:'', type:'Residential', note:'' },
+  defaultFilm: 'smart',
+  rooms: [],
+  photos: [],
+  signature: '',
+  exported: null,
+};
+
+const ROOM_TYPES  = ['Living Room','Bedroom','Office','Kitchen','Bathroom','Hallway','Conference Room','Lobby','Open Floor','Other'];
+const GLASS_TYPES = ['Single Pane','Double Pane (IGU)','Tempered','Laminated','Low-E Glass','Frosted','Other'];
+const WIN_TYPES   = [
+  {id:'standard',  label:'Standard',   icon:'🪟', desc:'Regular window'},
+  {id:'panoramic', label:'Panoramic',  icon:'🌅', desc:'Floor-to-ceiling'},
+  {id:'french',    label:'French',     icon:'🚪', desc:'French door/window'},
+  {id:'sliding',   label:'Sliding',    icon:'↔️', desc:'Sliding door/window'},
+  {id:'skylight',  label:'Skylight',   icon:'🌤', desc:'Overhead glass'},
+  {id:'corner',    label:'Corner',     icon:'📐', desc:'Corner window'},
+  {id:'arched',    label:'Arched',     icon:'🕍', desc:'Arched top'},
+  {id:'partition', label:'Partition',  icon:'🏢', desc:'Glass wall/partition'},
+];
+const FILM_TYPES  = [
+  {id:'smart',   label:'Smart PDLC', icon:'⚡', color:'var(--smart)'},
+  {id:'protect', label:'Safety',     icon:'🛡', color:'var(--protect)'},
+  {id:'solar',   label:'Solar',      icon:'☀️', color:'var(--solar)'},
+  {id:'none',    label:'None',       icon:'—',  color:'var(--muted2)'},
+];
+const CTRL_TYPES  = ['Wall Switch','Remote','App / WiFi','Motion Sensor','Timer','Alexa/Google Home'];
+const DIRS        = ['N','NE','E','SE','S','SW','W','NW'];
+
+function $(id){ return document.getElementById(id); }
+function fmtI(v){ return (Math.round((v||0)*100)/100).toFixed(2); }
+function fmtSF(v){ return (Math.round((v||0)*100)/100).toFixed(2); }
+function inToFt(i){ return i/12; }
+function inSF(w,h){ return (w/12)*(h/12); }
+
+// ══ NAV ══
+function go(id, btn){
+  document.querySelectorAll('.step').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
+  if(btn) btn.classList.add('on');
+  const pg = $('pg-'+id);
+  if(pg) pg.classList.add('on');
+  if(id==='electric') renderElectric();
+  if(id==='drawings') renderDrawings();
+  if(id==='sign')     renderExportSummary();
+  updateSidebar();
+}
+
+// ══ PROJECT INFO ══
+function syncInfo(){
+  D.job.num = $('p_num')?.value||'';
+  D.job.date= $('p_date')?.value||'';
+  D.job.name= $('p_name')?.value||'';
+  D.job.measurer = $('p_msr')?.value||'';
+  D.client.name  = $('c_name')?.value||'';
+  D.client.phone = $('c_phone')?.value||'';
+  D.client.email = $('c_email')?.value||'';
+  D.client.type  = $('c_type')?.value||'Residential';
+  D.client.note  = $('c_note')?.value||'';
+  updateSidebar();
+}
+function setProjectFilm(el, film){
+  D.defaultFilm = film;
+  document.querySelectorAll('#proj-film-sel .film-opt').forEach(b=>b.classList.remove('on'));
+  el.classList.add('on');
+}
+
+// ══ ROOMS ══
+let activeRoom = null;
+function addRoom(){
+  const id = Date.now();
+  D.rooms.push({
+    id, name:'Room '+(D.rooms.length+1), type:'Living Room',
+    floor:1, width_ft:0, depth_ft:0, ceiling_ft:9,
+    filmOverride: null, // null = use project default
+    windows: [],
+  });
+  activeRoom = id;
+  renderRooms(); updateSidebar();
+  go('rooms', document.querySelector('[data-tab=rooms]'));
+}
+function delRoom(id){
+  if(!confirm('Delete this room?')) return;
+  D.rooms = D.rooms.filter(r=>r.id!==id);
+  if(activeRoom===id) activeRoom = D.rooms[0]?.id||null;
+  renderRooms(); updateSidebar();
+}
+function setRoomFilm(roomId, film, el){
+  const room = D.rooms.find(r=>r.id===roomId);
+  if(!room) return;
+  room.filmOverride = film==='inherit' ? null : film;
+  // Update UI buttons in this room
+  el.closest('.level-content').querySelectorAll('.film-opt').forEach(b=>b.classList.remove('on'));
+  el.classList.add('on');
+  renderRooms();
+}
+
+function addWindow(roomId){
+  const room = D.rooms.find(r=>r.id===roomId);
+  if(!room) return;
+  const n = room.windows.length+1;
+  room.windows.push({
+    id:Date.now(), label:'W-'+n, type:'standard',
+    direction:'S', glass:GLASS_TYPES[1],
+    width_in:0, height_in:0, count:1,
+    filmOverride: null,
+    zones:[], note:'',
+  });
+  renderRooms(); updateSidebar();
+}
+function delWindow(roomId, winId){
+  const room = D.rooms.find(r=>r.id===roomId);
+  if(!room) return;
+  room.windows = room.windows.filter(w=>w.id!==winId);
+  renderRooms(); updateSidebar();
+}
+function setWinFilm(roomId, winId, film, el){
+  const room = D.rooms.find(r=>r.id===roomId);
+  const win  = room?.windows.find(w=>w.id===winId);
+  if(!win) return;
+  win.filmOverride = film==='inherit' ? null : film;
+  el.closest('.win-film-sel').querySelectorAll('.film-opt').forEach(b=>b.classList.remove('on'));
+  el.classList.add('on');
+  // If smart, ensure at least 1 zone
+  if(film==='smart' && win.zones.length===0){
+    win.zones.push({id:Date.now(),name:'Zone 1',width_in:win.width_in||0,height_in:win.height_in||0,control:'Wall Switch'});
+  }
+  renderRooms();
+}
+function addZone(roomId, winId){
+  const room = D.rooms.find(r=>r.id===roomId);
+  const win  = room?.windows.find(w=>w.id===winId);
+  if(!win) return;
+  win.zones.push({id:Date.now(),name:'Zone '+(win.zones.length+1),width_in:0,height_in:0,control:'Wall Switch'});
+  renderRooms();
+}
+function delZone(roomId, winId, zId){
+  const room = D.rooms.find(r=>r.id===roomId);
+  const win  = room?.windows.find(w=>w.id===winId);
+  if(!win) return;
+  win.zones = win.zones.filter(z=>z.id!==zId);
+  renderRooms();
+}
+// ── COMPASS ──
+const DIR_ANGLES = {N:0,NE:45,E:90,SE:135,S:180,SW:225,W:270,NW:315};
+const ANGLE_DIRS = Object.fromEntries(Object.entries(DIR_ANGLES).map(([k,v])=>[v,k]));
+
+function angleToDirName(angle){
+  const a = ((angle%360)+360)%360;
+  const snapped = Math.round(a/45)*45%360;
+  return ANGLE_DIRS[snapped]||'N';
+}
+
+function buildCompassSVG(winId, dir, roomId){
+  const angle = DIR_ANGLES[dir]||0;
+  const cx=60,cy=60,r=50;
+  // Tick marks and labels
+  const ticks = ['N','NE','E','SE','S','SW','W','NW'].map((d,i)=>{
+    const a=(i*45-90)*Math.PI/180;
+    const x1=cx+r*0.75*Math.cos(a), y1=cy+r*0.75*Math.sin(a);
+    const x2=cx+r*0.88*Math.cos(a), y2=cy+r*0.88*Math.sin(a);
+    const lx=cx+r*0.6*Math.cos(a), ly=cy+r*0.6*Math.sin(a)+3;
+    const isCard=d.length===1;
+    return `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}"
+      stroke="${isCard?'rgba(0,200,255,0.5)':'rgba(255,255,255,0.15)'}" stroke-width="${isCard?1.5:1}"/>
+    <text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" fill="${isCard?'rgba(0,200,255,0.7)':'rgba(255,255,255,0.25)'}"
+      font-size="${isCard?9:7}" text-anchor="middle" font-family="IBM Plex Mono" font-weight="${isCard?700:400}">${d}</text>`;
+  }).join('');
+
+  // Arrow points
+  const needle = buildNeedle(cx,cy,angle,r*0.55);
+
+  return `<svg class="compass-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"
+    id="cmpsvg-${winId}"
+    onmousedown="cmpStart(event,${winId},${roomId})"
+    ontouchstart="cmpStart(event,${winId},${roomId})"
+    onmousemove="cmpMove(event,${winId},${roomId})"
+    ontouchmove="cmpMove(event,${winId},${roomId})"
+    onmouseup="cmpEnd(event,${winId},${roomId})"
+    onmouseleave="cmpEnd(event,${winId},${roomId})"
+    ontouchend="cmpEnd(event,${winId},${roomId})">
+    <!-- Outer ring -->
+    <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="rgba(0,200,255,0.15)" stroke-width="1.5"/>
+    <circle cx="${cx}" cy="${cy}" r="${r*0.65}" fill="rgba(0,200,255,0.03)" stroke="rgba(0,200,255,0.08)" stroke-width="1"/>
+    <!-- Ticks & labels -->
+    ${ticks}
+    <!-- Needle group (rotatable) -->
+    <g id="cmp-needle-${winId}" transform="rotate(${angle},${cx},${cy})">
+      ${needle}
+    </g>
+    <!-- Center dot -->
+    <circle cx="${cx}" cy="${cy}" r="4" fill="var(--bg3)" stroke="rgba(0,200,255,0.6)" stroke-width="1.5"/>
+    <circle cx="${cx}" cy="${cy}" r="2" fill="var(--accent)" opacity="0.8"/>
+  </svg>`;
+}
+
+function buildNeedle(cx,cy,angle,len){
+  // North tip (red)
+  const tipX=cx, tipY=cy-len;
+  // South tail
+  const tailX=cx, tailY=cy+len*0.55;
+  // Side points for arrowhead
+  const w=5;
+  return `
+    <!-- North arrow (colored) -->
+    <polygon points="${cx},${cy-len} ${cx-w},${cy-len*0.2} ${cx+w},${cy-len*0.2}"
+      fill="var(--accent)" opacity="0.9"/>
+    <!-- South arrow (dark) -->
+    <polygon points="${cx},${cy+len*0.55} ${cx-w*0.8},${cy+len*0.1} ${cx+w*0.8},${cy+len*0.1}"
+      fill="rgba(255,255,255,0.15)"/>
+    <!-- Needle line -->
+    <line x1="${cx}" y1="${cy-len}" x2="${cx}" y2="${cy+len*0.55}"
+      stroke="rgba(0,200,255,0.3)" stroke-width="1" stroke-dasharray="2,2"/>
+  `;
+}
+
+let cmpActive={};
+function cmpStart(e,winId,roomId){
+  e.preventDefault();
+  cmpActive[winId]={roomId, dragging:true};
+  cmpMove(e,winId,roomId);
+}
+function cmpMove(e,winId,roomId){
+  if(!cmpActive[winId]?.dragging) return;
+  e.preventDefault();
+  const svg=document.getElementById('cmpsvg-'+winId);
+  if(!svg) return;
+  const rect=svg.getBoundingClientRect();
+  const src=e.touches?e.touches[0]:e;
+  const cx=rect.left+rect.width/2;
+  const cy=rect.top+rect.height/2;
+  const dx=src.clientX-cx, dy=src.clientY-cy;
+  let angle=(Math.atan2(dy,dx)*180/Math.PI+90+360)%360;
+  // Snap to nearest 45°
+  angle=Math.round(angle/45)*45%360;
+  const dir=angleToDirName(angle);
+  // Update needle
+  const needle=document.getElementById('cmp-needle-'+winId);
+  if(needle) needle.setAttribute('transform',`rotate(${angle},60,60)`);
+  // Update label
+  const lbl=document.getElementById('cmp-lbl-'+winId);
+  if(lbl) lbl.textContent=dir;
+  // Update data
+  const room=D.rooms.find(r=>r.id===roomId);
+  const win=room?.windows.find(w=>w.id===winId);
+  if(win) win.direction=dir;
+}
+function cmpEnd(e,winId,roomId){
+  if(cmpActive[winId]) cmpActive[winId].dragging=false;
+}
+
+function setWinDir(roomId, winId, dir){
+  const room = D.rooms.find(r=>r.id===roomId);
+  const win  = room?.windows.find(w=>w.id===winId);
+  if(!win) return;
+  win.direction = dir;
+  const angle = DIR_ANGLES[dir]||0;
+  const needle=document.getElementById('cmp-needle-'+winId);
+  if(needle) needle.setAttribute('transform',`rotate(${angle},60,60)`);
+  const lbl=document.getElementById('cmp-lbl-'+winId);
+  if(lbl) lbl.textContent=dir;
+}
+function setWinType(roomId, winId, type){
+  const room = D.rooms.find(r=>r.id===roomId);
+  const win  = room?.windows.find(w=>w.id===winId);
+  if(win) win.type = type;
+  document.querySelectorAll(`[data-wid="${winId}"] .wt-btn`).forEach(b=>{
+    b.classList.toggle('on', b.dataset.wtype===type);
+  });
+}
+function upd(roomId, winId, field, val){
+  const room = D.rooms.find(r=>r.id===roomId);
+  const win  = room?.windows.find(w=>w.id===winId);
+  if(win){
+    win[field] = isNaN(parseFloat(val)) ? val : (parseFloat(val)||0);
+    if(field==='width_in'||field==='height_in') updateSidebar();
+  }
+}
+function updZ(roomId, winId, zId, field, val){
+  const room = D.rooms.find(r=>r.id===roomId);
+  const win  = room?.windows.find(w=>w.id===winId);
+  const z    = win?.zones.find(z=>z.id===zId);
+  if(z) z[field] = isNaN(parseFloat(val)) ? val : (parseFloat(val)||0);
+}
+function updR(roomId, field, val){
+  const room = D.rooms.find(r=>r.id===roomId);
+  if(room) room[field] = isNaN(parseFloat(val)) ? val : (parseFloat(val)||0);
+  updateSidebar();
+}
+
+// ── effective film for a window ──
+function effectiveFilm(win, room){
+  if(win.filmOverride!==null) return win.filmOverride;
+  if(room.filmOverride!==null) return room.filmOverride;
+  return D.defaultFilm;
+}
+
+// ══ RENDER ROOMS ══
+function renderRooms(){
+  const wrap = $('rooms-wrap');
+  if(!wrap) return;
+  if(!D.rooms.length){
+    wrap.innerHTML=`<div style="text-align:center;padding:50px;color:var(--muted)"><div style="font-size:40px;margin-bottom:10px">🏠</div><div style="font-size:13px;font-weight:600;margin-bottom:6px">No rooms yet</div><button class="btn ba" onclick="addRoom()">+ Add First Room</button></div>`;
+    return;
+  }
+  wrap.innerHTML = D.rooms.map(room => renderRoom(room)).join('');
+  $('sd-rooms').textContent = D.rooms.length;
+  updateSidebar();
+}
+
+function renderRoom(room){
+  const totSF = calcRoomSF(room);
+  const curFilm = room.filmOverride || D.defaultFilm;
+  const filmOpts = ['inherit',...FILM_TYPES.map(f=>f.id)].map(f=>{
+    const fi = FILM_TYPES.find(x=>x.id===f);
+    const isOn = f==='inherit'? room.filmOverride===null : room.filmOverride===f;
+    return`<div class="film-opt ${isOn?'on ':''} ${f==='inherit'?'none':f}"
+      onclick="setRoomFilm(${room.id},'${f}',this)">${fi?fi.icon+'':'🔗'} ${f==='inherit'?'Inherit ('+D.defaultFilm+')':fi?.label||f}</div>`;
+  }).join('');
+
+  return`<div class="card" id="room-${room.id}">
+    <div class="ch">
+      <div class="ct">
+        🏠 <input value="${room.name}" onchange="D.rooms.find(r=>r.id==${room.id}).name=this.value;updateSidebar()"
+          style="background:transparent;border:none;font-size:12px;font-weight:700;color:var(--text);width:130px;padding:0">
+        <select onchange="D.rooms.find(r=>r.id==${room.id}).type=this.value"
+          style="background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:2px 7px;font-size:10px;color:var(--muted2)">
+          ${ROOM_TYPES.map(t=>`<option ${t===room.type?'selected':''}>${t}</option>`).join('')}
+        </select>
+      </div>
+      <div style="display:flex;gap:5px;align-items:center">
+        <span class="mono" style="font-size:10px;color:var(--muted2)">${room.windows.length} win · ${fmtSF(totSF.smart)} sf smart</span>
+        <button class="btn bsm ba" onclick="addWindow(${room.id})">+ Window</button>
+        <button class="btn bsm br" onclick="delRoom(${room.id})">🗑</button>
+      </div>
+    </div>
+    <div class="cb">
+
+      <!-- Room dimensions -->
+      <div class="fg f4" style="margin-bottom:12px">
+        <div class="fl"><label>Floor</label><input type="number" value="${room.floor||1}" min="1" onchange="updR(${room.id},'floor',this.value)" placeholder="1"></div>
+        <div class="fl"><label>Width (ft)</label><input type="number" value="${room.width_ft||''}" step="0.1" onchange="updR(${room.id},'width_ft',this.value)" placeholder="15.5"></div>
+        <div class="fl"><label>Depth (ft)</label><input type="number" value="${room.depth_ft||''}" step="0.1" onchange="updR(${room.id},'depth_ft',this.value)" placeholder="12.0"></div>
+        <div class="fl"><label>Ceiling (ft)</label><input type="number" value="${room.ceiling_ft||9}" step="0.1" onchange="updR(${room.id},'ceiling_ft',this.value)" placeholder="9.0"></div>
+      </div>
+
+      <!-- Film override for room -->
+      <div style="margin-bottom:12px">
+        <label style="display:block;margin-bottom:6px">Film for this room</label>
+        <div class="level-content"><div class="film-sel">${filmOpts}</div></div>
+      </div>
+
+      ${room.windows.length===0?`<div class="alert ai">Click "+ Window" to add windows to this room</div>`:''}
+      ${room.windows.map(win=>renderWindow(room.id,win,room)).join('')}
+    </div>
+  </div>`;
+}
+
+function renderWindow(roomId, win, room){
+  const film = effectiveFilm(win, room);
+  const wt   = WIN_TYPES.find(t=>t.id===win.type)||WIN_TYPES[0];
+  const fi   = FILM_TYPES.find(f=>f.id===film)||FILM_TYPES[0];
+  const sf   = (win.width_in&&win.height_in) ? inSF(win.width_in,win.height_in)*(win.count||1) : 0;
+
+  // Film options for this window
+  const filmOpts = ['inherit',...FILM_TYPES.map(f=>f.id)].map(f=>{
+    const fInfo = FILM_TYPES.find(x=>x.id===f);
+    const isOn  = f==='inherit'? win.filmOverride===null : win.filmOverride===f;
+    const effFilm = f==='inherit' ? (room.filmOverride||D.defaultFilm) : f;
+    return`<div class="film-opt ${isOn?'on ':''} ${f==='inherit'?'none':f} win-film-sel"
+      onclick="setWinFilm(${roomId},${win.id},'${f}',this)">
+      ${fInfo?fInfo.icon+'':'🔗'} ${f==='inherit'?'Inherit ('+effFilm+')':fInfo?.label||f}</div>`;
+  }).join('');
+
+  const zonesHtml = film==='smart' ? win.zones.map(z=>`
+    <div class="zone-card">
+      <div class="zone-hdr">
+        <div class="zone-id">⚡ <input value="${z.name}" onchange="updZ(${roomId},${win.id},${z.id},'name',this.value)"
+          style="background:transparent;border:none;color:var(--purple);font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;width:80px;padding:0"></div>
+        <button class="btn bsm br" onclick="delZone(${roomId},${win.id},${z.id})">✕</button>
+      </div>
+      <div class="fg f3">
+        <div class="fl"><label>Width (in)</label>
+          <input type="number" value="${z.width_in||''}" placeholder="48" step="0.25"
+            onchange="updZ(${roomId},${win.id},${z.id},'width_in',this.value)">
+        </div>
+        <div class="fl"><label>Height (in)</label>
+          <input type="number" value="${z.height_in||''}" placeholder="60" step="0.25"
+            onchange="updZ(${roomId},${win.id},${z.id},'height_in',this.value)">
+        </div>
+        <div class="fl"><label>Control</label>
+          <select onchange="updZ(${roomId},${win.id},${z.id},'control',this.value)">
+            ${CTRL_TYPES.map(c=>`<option ${c===z.control?'selected':''}>${c}</option>`).join('')}
+          </select>
+        </div>
+      </div>
+      ${z.width_in&&z.height_in?`<div style="font-size:9px;color:var(--muted2);margin-top:6px;font-family:'IBM Plex Mono',monospace">
+        📐 ${z.width_in}" × ${z.height_in}" = ${fmtSF(inSF(z.width_in,z.height_in))} sq ft
+      </div>`:''}
+    </div>`).join('') : '';
+
+  return`<div class="win-card ${film}" data-wid="${win.id}">
+    <div class="win-hdr">
+      <div style="display:flex;align-items:center;gap:8px">
+        <span class="win-id">
+          <input value="${win.label}" onchange="D.rooms.find(r=>r.id==${roomId})?.windows.find(w=>w.id==${win.id})&&(D.rooms.find(r=>r.id==${roomId}).windows.find(w=>w.id==${win.id}).label=this.value)"
+            style="background:transparent;border:none;color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;width:60px;padding:0">
+        </span>
+        <span style="font-size:14px">${wt.icon}</span>
+        <span style="font-size:11px;color:var(--muted2)">${wt.label}</span>
+        <span class="fb fb-${film}">${fi.icon} ${fi.label}</span>
+        ${sf>0?`<span class="mono" style="font-size:10px;color:var(--muted2)">${fmtSF(sf)} sf</span>`:''}
+      </div>
+      <button class="btn bsm br" onclick="delWindow(${roomId},${win.id})">🗑</button>
+    </div>
+
+    <!-- Window Type -->
+    <div class="wt-grid">
+      ${WIN_TYPES.map(t=>`<div class="wt-btn ${t.id===win.type?'on':''}" data-wtype="${t.id}"
+        onclick="setWinType(${roomId},${win.id},'${t.id}')">
+        <div class="wt-icon">${t.icon}</div>
+        <div class="wt-label">${t.label}</div>
+      </div>`).join('')}
+    </div>
+
+    <!-- Dimensions -->
+    <div class="fg f4" style="margin-bottom:8px">
+      <div class="fl"><label>Width (inches) *</label>
+        <input type="number" value="${win.width_in||''}" placeholder='36"' step="0.25"
+          oninput="upd(${roomId},${win.id},'width_in',this.value)" onchange="renderRooms()">
+      </div>
+      <div class="fl"><label>Height (inches) *</label>
+        <input type="number" value="${win.height_in||''}" placeholder='72"' step="0.25"
+          oninput="upd(${roomId},${win.id},'height_in',this.value)" onchange="renderRooms()">
+      </div>
+      <div class="fl"><label>Qty</label>
+        <input type="number" value="${win.count||1}" min="1" step="1"
+          oninput="upd(${roomId},${win.id},'count',this.value)" onchange="renderRooms()">
+      </div>
+      <div class="fl"><label>Glass Type</label>
+        <select onchange="upd(${roomId},${win.id},'glass',this.value)">
+          ${GLASS_TYPES.map(g=>`<option ${g===win.glass?'selected':''}>${g}</option>`).join('')}
+        </select>
+      </div>
+    </div>
+    <button class="btn ba bsm" style="width:100%;margin-bottom:10px;font-size:11px"
+      onclick="openARMeasure(${win.id},${roomId})">
+      📐 Measure with Camera (AR)
+    </button>
+
+    <!-- Direction compass -->
+    <div style="display:flex;gap:14px;align-items:center;margin-bottom:10px">
+      <div>
+        <label style="display:block;margin-bottom:6px">Orientation</label>
+        <div class="compass-wrap" id="cmp-${win.id}">
+          ${buildCompassSVG(win.id, win.direction, roomId)}
+        </div>
+        <div class="compass-label" id="cmp-lbl-${win.id}">${win.direction}</div>
+        <button class="btn bsm ba" style="width:100%;margin-top:5px;font-size:10px"
+          onclick="autoCompass(${win.id},${roomId})">🧭 Auto-Detect</button>
+        <div style="font-size:9px;color:var(--muted2);text-align:center;margin-top:3px" id="cmp-auto-${win.id}"></div>
+      </div>
+      <div style="flex:1">
+        <div style="margin-bottom:8px">
+          ${win.width_in&&win.height_in?`<div class="mono" style="font-size:13px;color:var(--text)">${win.width_in}" × ${win.height_in}"</div>
+          <div style="font-size:11px;color:var(--muted2);margin-top:2px">
+            ${(win.width_in/12).toFixed(1)}ft × ${(win.height_in/12).toFixed(1)}ft · <strong style="color:var(--accent)">${fmtSF(sf)} sq ft</strong>
+            ${win.count>1?` × ${win.count} = ${fmtSF(sf)} sf total`:''}
+          </div>`:'<div style="font-size:11px;color:var(--muted2)">Enter dimensions above</div>'}
+        </div>
+      </div>
+    </div>
+
+    <!-- Film override -->
+    <div style="margin-bottom:8px">
+      <label style="display:block;margin-bottom:5px">Film for this window</label>
+      <div class="film-sel win-film-sel">${filmOpts}</div>
+    </div>
+
+    <!-- Zones (smart only) -->
+    ${film==='smart'?`<div style="margin-bottom:6px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+        <label>Smart Zones</label>
+        <button class="btn bsm bp" onclick="addZone(${roomId},${win.id})">+ Add Zone</button>
+      </div>
+      ${zonesHtml||'<div class="alert aw">Add at least one zone for smart film</div>'}
+    </div>`:''}
+
+    <div class="fl">
+      <label>Window Notes</label>
+      <input value="${win.note||''}" placeholder="Custom shape, accessibility issue, film overlap..."
+        onchange="upd(${roomId},${win.id},'note',this.value)">
+    </div>
+  </div>`;
+}
+
+// ══ CALCULATIONS ══
+function calcRoomSF(room){
+  const sf = {smart:0, protect:0, solar:0};
+  room.windows.forEach(win=>{
+    const film = effectiveFilm(win, room);
+    if(film==='none') return;
+    if(film==='smart'){
+      const zSF = win.zones.reduce((s,z)=>s+inSF(z.width_in||0,z.height_in||0),0);
+      sf.smart += zSF*(win.count||1);
+    } else {
+      sf[film] = (sf[film]||0) + inSF(win.width_in||0,win.height_in||0)*(win.count||1);
+    }
+  });
+  return sf;
+}
+function calcTotals(){
+  let smart=0,protect=0,solar=0,zones=0;
+  D.rooms.forEach(r=>{
+    const sf=calcRoomSF(r);
+    smart+=sf.smart; protect+=sf.protect; solar+=sf.solar;
+    r.windows.forEach(w=>{
+      if(effectiveFilm(w,r)==='smart') zones+=w.zones.length*(w.count||1);
+    });
+  });
+  const psu=Math.max(1,Math.ceil(zones/10));
+  return{smart,protect,solar,zones,psu,totalSF:smart+protect+solar};
+}
+
+// ══ ELECTRICAL ══
+function renderElectric(){
+  const el = $('elec-wrap');
+  if(!el) return;
+  let rows=[];
+  D.rooms.forEach(room=>{
+    room.windows.forEach(win=>{
+      if(effectiveFilm(win,room)!=='smart') return;
+      win.zones.forEach((z,i)=>{
+        rows.push({room:room.name,win:win.label,dir:win.direction,zone:z,wCount:win.count||1,idx:rows.length+1});
+      });
+    });
+  });
+  $('sd-electric').textContent = rows.length;
+  if(!rows.length){
+    el.innerHTML=`<div class="alert ai">No smart film zones found. Add Smart (PDLC) film to windows first.</div>`;
+    return;
+  }
+  const t=calcTotals();
+  el.innerHTML=`
+    <div class="kpi-row">
+      <div class="kpi" style="--kc:var(--purple)"><div class="kpiv">${t.zones}</div><div class="kpil">Total Zones</div></div>
+      <div class="kpi" style="--kc:var(--yellow)"><div class="kpiv">${t.psu}</div><div class="kpil">Power Supplies</div></div>
+      <div class="kpi" style="--kc:var(--smart)"><div class="kpiv">${fmtSF(t.smart)}</div><div class="kpil">Smart sq ft</div></div>
+      <div class="kpi" style="--kc:var(--green)"><div class="kpiv">${rows.length}</div><div class="kpil">Zone Lines</div></div>
+    </div>
+    <div class="card">
+      <div class="ch"><div class="ct">⚡ Zone Schedule</div></div>
+      <div style="overflow-x:auto">
+        <table class="tbl">
+          <thead><tr><th>#</th><th>Room</th><th>Window</th><th>Dir</th><th>Zone</th><th>Width</th><th>Height</th><th>Sq Ft</th><th>Control</th></tr></thead>
+          <tbody>
+            ${rows.map(r=>`<tr>
+              <td class="mono">${r.idx}</td>
+              <td>${r.room}</td>
+              <td style="color:var(--accent);font-family:'IBM Plex Mono',monospace">${r.win}</td>
+              <td><strong>${r.dir}</strong></td>
+              <td>${r.zone.name}</td>
+              <td class="mono">${r.zone.width_in||0}"</td>
+              <td class="mono">${r.zone.height_in||0}"</td>
+              <td class="mono" style="color:var(--smart)">${fmtSF(inSF(r.zone.width_in||0,r.zone.height_in||0))}</td>
+              <td><span class="fb fb-smart">${r.zone.control}</span></td>
+            </tr>`).join('')}
+          </tbody>
+        </table>
+      </div>
+      <div style="padding:12px;font-size:11px;color:var(--muted2)">
+        📦 Power Supplies needed: <strong style="color:var(--text)">${t.psu}</strong> (1 per 10 zones, +20% buffer recommended)
+      </div>
+    </div>`;
+}
+
+// ══ DRAWINGS ══
+function renderDrawings(){
+  const el = $('drawings-wrap');
+  if(!el) return;
+  if(!D.rooms.length){
+    el.innerHTML=`<div class="alert ai">Add rooms and windows to generate drawings.</div>`;
+    return;
+  }
+  el.innerHTML = D.rooms.map(room=>drawRoom(room)).join('');
+}
+
+function drawRoom(room){
+  const W = Math.max(room.width_ft||14,4);
+  const H = Math.max(room.depth_ft||12,4);
+  const SCALE=Math.min(560/W,380/H,50);
+  const rW=W*SCALE, rH=H*SCALE;
+  const PAD=50, cW=rW+PAD*2, cH=rH+PAD*2;
+
+  const filmColors={smart:'#00C8FF',protect:'#00E599',solar:'#FFB020',none:'#4E5A6E'};
+  const winTypeShapes={
+    standard:  (x,y,w,h,horiz)=>horiz?`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#1E2535" stroke="#374151" stroke-width="1"/><line x1="${x+w*0.5}" y1="${y}" x2="${x+w*0.5}" y2="${y+h}" stroke="#374151" stroke-width="0.5"/>`
+                                      :`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#1E2535" stroke="#374151" stroke-width="1"/><line x1="${x}" y1="${y+h*0.5}" x2="${x+w}" y2="${y+h*0.5}" stroke="#374151" stroke-width="0.5"/>`,
+    panoramic: (x,y,w,h,horiz)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#1E2535" stroke="#00C8FF" stroke-width="1.5" stroke-dasharray="3,1"/>`,
+    french:    (x,y,w,h,horiz)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#1E2535" stroke="#374151" stroke-width="1"/><rect x="${x+1}" y="${y+1}" width="${w/2-2}" height="${h-2}" fill="none" stroke="#4E5A6E" stroke-width="0.5"/><rect x="${x+w/2+1}" y="${y+1}" width="${w/2-2}" height="${h-2}" fill="none" stroke="#4E5A6E" stroke-width="0.5"/>`,
+    sliding:   (x,y,w,h,horiz)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#1E2535" stroke="#374151" stroke-width="1"/><rect x="${x+2}" y="${y+2}" width="${w/2-3}" height="${h-4}" fill="#111827" stroke="#374151" stroke-width="0.5"/>`,
+    skylight:  (x,y,w,h,horiz)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#1E2535" stroke="#FFB020" stroke-width="1.5"/><line x1="${x}" y1="${y}" x2="${x+w}" y2="${y+h}" stroke="#FFB020" stroke-width="0.5" opacity="0.4"/><line x1="${x+w}" y1="${y}" x2="${x}" y2="${y+h}" stroke="#FFB020" stroke-width="0.5" opacity="0.4"/>`,
+    corner:    (x,y,w,h,horiz)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#1E2535" stroke="#9D5CF6" stroke-width="1.5"/>`,
+    arched:    (x,y,w,h,horiz)=>`<rect x="${x}" y="${y+h/3}" width="${w}" height="${h*2/3}" fill="#1E2535" stroke="#374151" stroke-width="1"/><path d="M${x},${y+h/3} Q${x+w/2},${y-2} ${x+w},${y+h/3}" fill="#1E2535" stroke="#374151" stroke-width="1"/>`,
+    partition: (x,y,w,h,horiz)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#111827" stroke="#00C8FF" stroke-width="1" stroke-dasharray="4,2" opacity="0.8"/>`,
+  };
+
+  let svgElements = '';
+  // Room fill
+  svgElements += `<rect x="${PAD}" y="${PAD}" width="${rW}" height="${rH}" fill="#111827" stroke="#00C8FF" stroke-width="2" rx="2"/>`;
+
+  // Room label
+  svgElements += `<text x="${PAD+rW/2}" y="${PAD+rH/2}" fill="rgba(255,255,255,0.04)" font-size="${Math.min(rW,rH)*0.3}" text-anchor="middle" dominant-baseline="middle" font-family="Rajdhani,sans-serif" font-weight="700">${room.name.toUpperCase()}</text>`;
+
+  // Dimension labels
+  svgElements += `<text x="${PAD+rW/2}" y="${PAD-14}" fill="#4E5A6E" font-size="11" text-anchor="middle" font-family="IBM Plex Mono">${W}ft (${Math.round(W*12)}")</text>`;
+  svgElements += `<text x="${PAD-14}" y="${PAD+rH/2}" fill="#4E5A6E" font-size="11" text-anchor="middle" font-family="IBM Plex Mono" transform="rotate(-90,${PAD-14},${PAD+rH/2})">${H}ft</text>`;
+
+  // North indicator
+  svgElements += `<text x="${cW-20}" y="${PAD+16}" fill="#4E5A6E" font-size="10" text-anchor="middle" font-family="IBM Plex Mono">N↑</text>`;
+
+  // Place windows on walls
+  const wallWins = {N:[],S:[],E:[],W:[]};
+  room.windows.forEach(win=>{
+    const primary = win.direction.includes('N')&&!win.direction.includes('S')?'N':
+                    win.direction.includes('S')&&!win.direction.includes('N')?'S':
+                    win.direction.includes('E')&&!win.direction.includes('W')?'E':'W';
+    if(!wallWins[primary]) wallWins[primary]=[];
+    wallWins[primary].push(win);
+  });
+
+  let zoneCircleY = PAD+8;
+  let zoneNum=1;
+
+  ['N','S','E','W'].forEach(wall=>{
+    const wins=wallWins[wall]||[];
+    const isHoriz=wall==='N'||wall==='S';
+    const wallLen=isHoriz?rW:rH;
+    wins.forEach((win,wi)=>{
+      const wPx=Math.min((win.width_in||36)/12*SCALE, wallLen*0.35);
+      const thk=8;
+      const offset=wins.length>1?(wi/(wins.length))*(wallLen-wPx-20)+10:(wallLen-wPx)/2;
+      let wx,wy,ww,wh;
+      if(wall==='N'){wx=PAD+offset;wy=PAD-thk/2;ww=wPx;wh=thk;}
+      else if(wall==='S'){wx=PAD+offset;wy=PAD+rH-thk/2;ww=wPx;wh=thk;}
+      else if(wall==='W'){wx=PAD-thk/2;wy=PAD+offset;ww=thk;wh=wPx;}
+      else{wx=PAD+rW-thk/2;wy=PAD+offset;ww=thk;wh=wPx;}
+
+      const film=effectiveFilm(win,room);
+      const fColor=filmColors[film]||'#888';
+      const shape=winTypeShapes[win.type]||winTypeShapes.standard;
+      svgElements+=shape(wx,wy,ww,wh,isHoriz);
+      // Film color strip
+      svgElements+=`<rect x="${wx}" y="${wy}" width="${Math.min(3,ww)}" height="${Math.min(3,wh)}" fill="${fColor}" opacity="0.9"/>`;
+
+      // Label
+      const lx=wx+ww/2;
+      const ly=wall==='N'?wy-12:wall==='S'?wy+wh+14:wy+wh/2;
+      const lrotate=wall==='E'||wall==='W'?`transform="rotate(-90,${lx},${ly})"`:''
+      svgElements+=`<text x="${lx}" y="${ly}" fill="#00C8FF" font-size="9" text-anchor="middle" font-family="IBM Plex Mono" ${lrotate}>${win.label}</text>`;
+      if(win.width_in&&win.height_in){
+        const ly2=wall==='N'?wy-3:wall==='S'?wy+wh+23:ly+10;
+        svgElements+=`<text x="${lx}" y="${ly2}" fill="#4E5A6E" font-size="7.5" text-anchor="middle" font-family="IBM Plex Mono" ${lrotate}>${win.width_in}"×${win.height_in}"</text>`;
+      }
+
+      // Zone indicators
+      if(film==='smart'){
+        win.zones.forEach(z=>{
+          svgElements+=`<circle cx="${PAD+rW-8}" cy="${PAD+8+(zoneNum-1)*16}" r="6" fill="rgba(157,92,246,0.2)" stroke="#9D5CF6" stroke-width="1"/>`;
+          svgElements+=`<text x="${PAD+rW-8}" y="${PAD+12+(zoneNum-1)*16}" fill="#9D5CF6" font-size="7" text-anchor="middle" font-family="IBM Plex Mono">Z${zoneNum}</text>`;
+          zoneNum++;
+        });
+      }
+    });
+  });
+
+  const sf=calcRoomSF(room);
+  return`<div class="card" style="margin-bottom:14px;page-break-inside:avoid">
+    <div class="ch">
+      <div class="ct">📐 ${room.name} · ${room.type} · Floor ${room.floor||1}</div>
+      <div style="font-size:10px;color:var(--muted2)">${W}ft × ${H}ft · ${room.windows.length} windows</div>
+    </div>
+    <div class="cb">
+      <div class="draw-wrap">
+        <svg viewBox="0 0 ${cW} ${cH}" xmlns="http://www.w3.org/2000/svg" style="background:#080B10">
+          <!-- Grid -->
+          ${Array.from({length:Math.floor(W)+1},(_,i)=>`<line x1="${PAD+i*SCALE}" y1="${PAD}" x2="${PAD+i*SCALE}" y2="${PAD+rH}" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>`).join('')}
+          ${Array.from({length:Math.floor(H)+1},(_,i)=>`<line x1="${PAD}" y1="${PAD+i*SCALE}" x2="${PAD+rW}" y2="${PAD+i*SCALE}" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>`).join('')}
+          ${svgElements}
+          <!-- Legend -->
+          <text x="${PAD}" y="${cH-8}" fill="#4E5A6E" font-size="8" font-family="IBM Plex Mono">Scale: 1ft = ${SCALE.toFixed(0)}px · SF-MEASURE v2</text>
+        </svg>
+      </div>
+      <!-- Window schedule for this room -->
+      <table class="tbl" style="margin-top:10px">
+        <thead><tr><th>Win</th><th>Type</th><th>Size</th><th>Dir</th><th>Film</th><th>Zones</th><th>Sq Ft</th><th>Glass</th><th>Notes</th></tr></thead>
+        <tbody>
+          ${room.windows.map(w=>{
+            const film=effectiveFilm(w,room);
+            const fi=FILM_TYPES.find(f=>f.id===film)||FILM_TYPES[3];
+            const wt2=WIN_TYPES.find(t=>t.id===w.type)||WIN_TYPES[0];
+            const wSF=inSF(w.width_in||0,w.height_in||0)*(w.count||1);
+            const zCount=film==='smart'?w.zones.length:0;
+            return`<tr>
+              <td class="mono" style="color:var(--accent)">${w.label}</td>
+              <td>${wt2.icon} ${wt2.label}</td>
+              <td class="mono">${w.width_in||0}"×${w.height_in||0}" ${w.count>1?'×'+w.count:''}</td>
+              <td><strong>${w.direction}</strong></td>
+              <td><span class="fb fb-${film}">${fi.icon} ${fi.label}</span></td>
+              <td class="mono">${zCount}</td>
+              <td class="mono" style="color:var(--accent)">${fmtSF(wSF)}</td>
+              <td style="font-size:10px">${w.glass}</td>
+              <td style="font-size:10px;color:var(--muted2)">${w.note||'—'}</td>
+            </tr>`;
+          }).join('')}
+        </tbody>
+      </table>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;font-size:11px">
+        ${sf.smart>0?`<span class="fb fb-smart">⚡ Smart: ${fmtSF(sf.smart)} sf</span>`:''}
+        ${sf.protect>0?`<span class="fb fb-protect">🛡 Safety: ${fmtSF(sf.protect)} sf</span>`:''}
+        ${sf.solar>0?`<span class="fb fb-solar">☀️ Solar: ${fmtSF(sf.solar)} sf</span>`:''}
+      </div>
+    </div>
+  </div>`;
+}
+
+// ══ PHOTOS ══
+function addPhotos(e){
+  const files=Array.from(e.target.files||[]);
+  files.forEach(file=>{
+    const r=new FileReader();
+    r.onload=ev=>{
+      D.photos.push({id:Date.now()+Math.random(),name:file.name,data:ev.target.result});
+      renderPhotos();
+    };
+    r.readAsDataURL(file);
+  });
+  e.target.value='';
+}
+function delPhoto(id){
+  D.photos=D.photos.filter(p=>p.id!==id);
+  renderPhotos();
+}
+function renderPhotos(){
+  const grid=$('photo-grid');
+  if(!grid) return;
+  const thumbs=D.photos.map(p=>`<div class="photo-thumb">
+    <img src="${p.data}" alt="${p.name}">
+    <button class="photo-del" onclick="delPhoto(${p.id})">✕</button>
+  </div>`).join('');
+  grid.innerHTML=thumbs+`<label class="photo-add">
+    <input type="file" accept="image/*" multiple style="display:none" onchange="addPhotos(event)">
+    <div style="font-size:24px">📷</div><div>Add more</div>
+  </label>`;
+  $('sd-photos').textContent=D.photos.length||'';
+}
+
+// ══ SIGNATURE ══
+let sigCtx, sigDrawing=false, sigHasSig=false;
+function initSig(){
+  const c=$('sig-canvas');
+  if(!c||c._init) return;
+  c._init=true;
+  sigCtx=c.getContext('2d');
+  sigCtx.strokeStyle='#00C8FF';
+  sigCtx.lineWidth=2.5;
+  sigCtx.lineCap='round';
+  sigCtx.lineJoin='round';
+
+  function getPos(e){
+    const r=c.getBoundingClientRect();
+    const scaleX=c.width/r.width;
+    const src=e.touches?e.touches[0]:e;
+    return{x:(src.clientX-r.left)*scaleX, y:(src.clientY-r.top)*(c.height/r.height)};
+  }
+  c.addEventListener('mousedown',e=>{sigDrawing=true;const p=getPos(e);sigCtx.beginPath();sigCtx.moveTo(p.x,p.y);});
+  c.addEventListener('mousemove',e=>{if(!sigDrawing)return;const p=getPos(e);sigCtx.lineTo(p.x,p.y);sigCtx.stroke();sigHasSig=true;});
+  c.addEventListener('mouseup',()=>sigDrawing=false);
+  c.addEventListener('touchstart',e=>{e.preventDefault();sigDrawing=true;const p=getPos(e);sigCtx.beginPath();sigCtx.moveTo(p.x,p.y);},{passive:false});
+  c.addEventListener('touchmove',e=>{e.preventDefault();if(!sigDrawing)return;const p=getPos(e);sigCtx.lineTo(p.x,p.y);sigCtx.stroke();sigHasSig=true;},{passive:false});
+  c.addEventListener('touchend',()=>sigDrawing=false);
+}
+function clearSig(){
+  if(sigCtx) sigCtx.clearRect(0,0,600,160);
+  sigHasSig=false;
+  D.signature='';
+  $('sig-status').textContent='Not signed';
+}
+function saveSig(){
+  if(!sigHasSig){alert('Please sign first');return;}
+  D.signature=$('sig-canvas').toDataURL();
+  $('sig-status').textContent='✅ Signed — '+new Date().toLocaleString();
+  renderExportSummary();
+}
+
+function renderExportSummary(){
+  initSig();
+  const t=calcTotals();
+  const el=$('export-summary');
+  if(!el) return;
+  el.innerHTML=`
+    <strong>Project:</strong> ${D.job.name||'—'} (${D.job.num||'#'})<br>
+    <strong>Client:</strong> ${D.client.name||'—'}<br>
+    <strong>Rooms:</strong> ${D.rooms.length} · <strong>Windows:</strong> ${D.rooms.reduce((s,r)=>s+r.windows.length,0)}<br>
+    <strong>Smart PDLC:</strong> ${fmtSF(t.smart)} sq ft · <strong>Zones:</strong> ${t.zones} · <strong>PSU:</strong> ${t.psu}<br>
+    <strong>Safety Film:</strong> ${fmtSF(t.protect)} sq ft · <strong>Solar:</strong> ${fmtSF(t.solar)} sq ft<br>
+    <strong>Signature:</strong> ${D.signature?'✅ Signed':'⚠️ Not signed yet'}`;
+}
+
+// ══ SIDEBAR ══
+function updateSidebar(){
+  const t=calcTotals();
+  const sn=$('sb-name'); if(sn) sn.textContent=D.job.name||D.client.name||'—';
+  const sc=$('sb-client'); if(sc) sc.textContent=D.client.name||'—';
+  const sr=$('sb-rooms');
+  if(sr) sr.innerHTML=D.rooms.map(r=>{
+    const sf=calcRoomSF(r);
+    return`<div class="sb-room ${r.id===activeRoom?'on':''}" onclick="activeRoom=${r.id}">
+      <div class="sb-rname">${r.name}</div>
+      <div class="sb-rmeta">${r.type} · ${r.windows.length} win · ${fmtSF(sf.smart)} sf ⚡</div>
+    </div>`;
+  }).join('')+'<button class="btn bsm ba" style="width:100%;margin-top:5px" onclick="addRoom()">+ Room</button>';
+
+  const st=$('sb-totals');
+  if(st) st.innerHTML=`
+    <div class="sb-stat"><span>⚡ Smart</span><span class="sb-val">${fmtSF(t.smart)} sf</span></div>
+    <div class="sb-stat"><span>🛡 Safety</span><span class="sb-val">${fmtSF(t.protect)} sf</span></div>
+    <div class="sb-stat"><span>☀️ Solar</span><span class="sb-val">${fmtSF(t.solar)} sf</span></div>
+    <div class="sb-stat"><span>⚡ Zones</span><span class="sb-val">${t.zones}</span></div>
+    <div class="sb-stat"><span>📦 PSU</span><span class="sb-val">${t.psu}</span></div>
+    <div class="sb-stat" style="margin-top:4px"><span style="font-weight:700">Total</span><span class="sb-val" style="color:var(--green)">${fmtSF(t.totalSF)} sf</span></div>`;
+
+  const hj=$('hdr-job');
+  if(hj) hj.textContent=D.job.name||D.client.name||'New Project';
+}
+
+// ══ EXPORT ══
+function exportJSON(){
+  if(sigHasSig&&!D.signature) saveSig();
+  D.exported=new Date().toISOString();
+  const out=JSON.stringify(D,null,2);
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([out],{type:'application/json'}));
+  a.download=`SF-measure-${D.job.num||'project'}-${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+}
+function saveLocal(){
+  localStorage.setItem('sfm_project',JSON.stringify(D));
+  const hj=$('hdr-job');
+  if(hj){const orig=hj.textContent;hj.textContent='✅ Saved!';setTimeout(()=>hj.textContent=orig,1500);}
+}
+function loadLocal(){
+  $('lf').click();
+}
+function loadFile(e){
+  const file=e.target.files[0];
+  if(!file) return;
+  const r=new FileReader();
+  r.onload=ev=>{
+    try{
+      D=JSON.parse(ev.target.result);
+      // Restore form fields
+      if($('p_num')) $('p_num').value=D.job?.num||'';
+      if($('p_date')) $('p_date').value=D.job?.date||'';
+      if($('p_name')) $('p_name').value=D.job?.name||'';
+      if($('p_msr')) $('p_msr').value=D.job?.measurer||'';
+      if($('c_name')) $('c_name').value=D.client?.name||'';
+      if($('c_phone')) $('c_phone').value=D.client?.phone||'';
+      if($('c_email')) $('c_email').value=D.client?.email||'';
+      if($('c_note')) $('c_note').value=D.client?.note||'';
+      // Restore project film
+      document.querySelectorAll('#proj-film-sel .film-opt').forEach(b=>{
+        b.classList.toggle('on',b.dataset.film===D.defaultFilm);
+      });
+      renderRooms(); renderPhotos(); updateSidebar();
+      alert('✅ Project loaded: '+(D.job?.name||D.job?.num||'Project'));
+    }catch(err){alert('Error loading file: '+err.message);}
+  };
+  r.readAsText(file);
+  e.target.value='';
+}
+
+// ══ AUTO COMPASS ══
+let deviceHeading = null;
+let compassWatching = false;
+
+function startDeviceCompass(){
+  if(compassWatching) return;
+  // iOS DeviceOrientationEvent needs permission
+  if(typeof DeviceOrientationEvent !== 'undefined' && typeof DeviceOrientationEvent.requestPermission === 'function'){
+    DeviceOrientationEvent.requestPermission().then(state=>{
+      if(state==='granted'){
+        window.addEventListener('deviceorientationabsolute', onOrientation, true);
+        window.addEventListener('deviceorientation', onOrientation, true);
+        compassWatching = true;
+      } else {
+        alert('Compass permission denied. Please allow in Settings → Safari → Motion & Orientation.');
+      }
+    }).catch(err=>{
+      // fallback — try without permission
+      window.addEventListener('deviceorientation', onOrientation, true);
+      compassWatching = true;
+    });
+  } else if('DeviceOrientationEvent' in window){
+    window.addEventListener('deviceorientationabsolute', onOrientation, true);
+    window.addEventListener('deviceorientation', onOrientation, true);
+    compassWatching = true;
+  }
+}
+
+function onOrientation(e){
+  let heading = null;
+  if(e.webkitCompassHeading != null){
+    // iOS — already true north
+    heading = e.webkitCompassHeading;
+  } else if(e.absolute && e.alpha != null){
+    // Android absolute
+    heading = (360 - e.alpha) % 360;
+  } else if(e.alpha != null){
+    // Android non-absolute (less accurate)
+    heading = (360 - e.alpha) % 360;
+  }
+  if(heading != null) deviceHeading = Math.round(heading);
+}
+
+function autoCompass(winId, roomId){
+  const statusEl = document.getElementById('cmp-auto-'+winId);
+
+  // 1. Try device compass first
+  startDeviceCompass();
+
+  if(deviceHeading != null){
+    applyHeadingToWindow(winId, roomId, deviceHeading, statusEl);
+    return;
+  }
+
+  // 2. Try GPS + wait 1.5s for orientation
+  if(statusEl) statusEl.textContent = '⏳ Getting compass...';
+
+  // Request orientation permission (iOS 13+)
+  if(typeof DeviceOrientationEvent !== 'undefined' && typeof DeviceOrientationEvent.requestPermission === 'function'){
+    DeviceOrientationEvent.requestPermission().then(state=>{
+      if(state==='granted'){
+        window.addEventListener('deviceorientationabsolute', onOrientation, true);
+        window.addEventListener('deviceorientation', onOrientation, true);
+        compassWatching = true;
+        // Wait for first reading
+        let tries = 0;
+        const interval = setInterval(()=>{
+          tries++;
+          if(deviceHeading != null){
+            clearInterval(interval);
+            applyHeadingToWindow(winId, roomId, deviceHeading, statusEl);
+          } else if(tries > 15){
+            clearInterval(interval);
+            fallbackToGPS(winId, roomId, statusEl);
+          }
+        }, 200);
+      } else {
+        fallbackToGPS(winId, roomId, statusEl);
+      }
+    }).catch(()=> fallbackToGPS(winId, roomId, statusEl));
+  } else {
+    // Android or desktop — wait for reading
+    window.addEventListener('deviceorientationabsolute', onOrientation, true);
+    window.addEventListener('deviceorientation', onOrientation, true);
+    compassWatching = true;
+    let tries = 0;
+    const interval = setInterval(()=>{
+      tries++;
+      if(deviceHeading != null){
+        clearInterval(interval);
+        applyHeadingToWindow(winId, roomId, deviceHeading, statusEl);
+      } else if(tries > 15){
+        clearInterval(interval);
+        fallbackToGPS(winId, roomId, statusEl);
+      }
+    }, 200);
+  }
+}
+
+function applyHeadingToWindow(winId, roomId, heading, statusEl){
+  // heading = degrees from North (0=N, 90=E, 180=S, 270=W)
+  // Snap to nearest 45°
+  const snapped = Math.round(heading/45)*45 % 360;
+  const dir = angleToDirName(snapped);
+
+  // Apply to window
+  setWinDir(roomId, winId, dir);
+
+  // Update status
+  if(statusEl){
+    statusEl.innerHTML = `<span style="color:var(--green)">✅ ${heading.toFixed(0)}° → ${dir}</span>`;
+    setTimeout(()=>{ if(statusEl) statusEl.textContent=''; }, 3000);
+  }
+}
+
+function fallbackToGPS(winId, roomId, statusEl){
+  // GPS can't give compass heading directly, but we can use
+  // watchPosition with two points to calculate movement direction.
+  // More practical: just show manual hint with current GPS coords.
+  if(!navigator.geolocation){
+    if(statusEl) statusEl.innerHTML='<span style="color:var(--red)">No compass available</span>';
+    return;
+  }
+  if(statusEl) statusEl.textContent='📍 Getting location...';
+  navigator.geolocation.getCurrentPosition(pos=>{
+    const lat = pos.coords.latitude.toFixed(5);
+    const lon = pos.coords.longitude.toFixed(5);
+    if(statusEl) statusEl.innerHTML=`<span style="color:var(--yellow)">📍 ${lat}, ${lon}<br>Point device at window face</span>`;
+    // Try compass one more time after geolocation warms up sensor
+    setTimeout(()=>{
+      if(deviceHeading != null){
+        applyHeadingToWindow(winId, roomId, deviceHeading, statusEl);
+      } else {
+        if(statusEl) statusEl.innerHTML='<span style="color:var(--muted2)">Rotate device manually</span>';
+      }
+    }, 1000);
+  }, err=>{
+    if(statusEl) statusEl.innerHTML='<span style="color:var(--muted2)">Point device toward window ↑</span>';
+  });
+}
+
+// ══ AR MEASURE ══
+let AR = {
+  active: false,
+  winId: null,
+  roomId: null,
+  step: 1,           // 1=mark bottom, 2=mark top, 3=mark width-left, 4=mark width-right
+  bottomAngle: null, // pitch when bottom marked (degrees from horizontal)
+  topAngle: null,    // pitch when top marked
+  leftAngle: null,
+  rightAngle: null,
+  currentPitch: 0,   // live tilt
+  currentRoll: 0,
+  dist_ft: 10,
+  heightResult_in: null,
+  widthResult_in: null,
+  stream: null,
+};
+
+function openARMeasure(winId, roomId){
+  AR.winId = winId;
+  AR.roomId = roomId;
+  AR.step = 1;
+  AR.bottomAngle = AR.topAngle = AR.leftAngle = AR.rightAngle = null;
+  AR.heightResult_in = AR.widthResult_in = null;
+
+  const modal = document.getElementById('ar-modal');
+  modal.style.display = 'flex';
+
+  // Start camera
+  startCamera();
+  // Start orientation
+  startAROrientation();
+  // Update UI
+  arUpdateUI();
+}
+
+function closeAR(){
+  const modal = document.getElementById('ar-modal');
+  modal.style.display = 'none';
+  // Stop camera
+  if(AR.stream){ AR.stream.getTracks().forEach(t=>t.stop()); AR.stream=null; }
+  // Stop orientation
+  window.removeEventListener('deviceorientation', arOnOrientation, true);
+  window.removeEventListener('deviceorientationabsolute', arOnOrientation, true);
+  AR.active = false;
+}
+
+async function startCamera(){
+  try{
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video:{ facingMode:'environment', width:{ideal:1280}, height:{ideal:720} },
+      audio:false
+    });
+    AR.stream = stream;
+    const v = document.getElementById('ar-video');
+    if(v){ v.srcObject=stream; v.play(); }
+  }catch(e){
+    const inst = document.getElementById('ar-instruction');
+    if(inst) inst.querySelector('div').textContent = '⚠️ Camera access denied. Please allow camera in browser settings.';
+  }
+}
+
+function startAROrientation(){
+  const handler = () => {
+    window.addEventListener('deviceorientationabsolute', arOnOrientation, true);
+    window.addEventListener('deviceorientation', arOnOrientation, true);
+    AR.active = true;
+  };
+  if(typeof DeviceOrientationEvent !== 'undefined' && typeof DeviceOrientationEvent.requestPermission === 'function'){
+    DeviceOrientationEvent.requestPermission().then(s=>{ if(s==='granted') handler(); }).catch(handler);
+  } else {
+    handler();
+  }
+}
+
+function arOnOrientation(e){
+  // Beta = forward/back tilt (-180 to 180, 0=flat, 90=vertical portrait pointing up)
+  // Gamma = left/right tilt
+  let pitch = e.beta || 0;   // tilt up/down
+  let roll  = e.gamma || 0;  // tilt left/right
+  // iOS webkitCompassHeading available
+  AR.currentPitch = pitch;
+  AR.currentRoll  = roll;
+
+  const tiltEl = document.getElementById('ar-tilt-val');
+  if(tiltEl) tiltEl.textContent = Math.round(pitch) + '°';
+}
+
+// Convert angle difference + distance to inches
+function angDiffToInches(angle1_deg, angle2_deg, dist_ft){
+  // Both angles are device beta (pitch from horizontal)
+  // When phone is horizontal: beta~0, when vertical: beta~90
+  // We measure the angular difference between two points
+  const a1 = angle1_deg * Math.PI / 180;
+  const a2 = angle2_deg * Math.PI / 180;
+  // Height = dist * (tan(a2) - tan(a1))  [for height]
+  const h_ft = Math.abs(dist_ft * (Math.tan(a2) - Math.tan(a1)));
+  return h_ft * 12; // convert to inches
+}
+
+function arAction(){
+  const dist = parseFloat(document.getElementById('ar-dist')?.value) || 10;
+  AR.dist_ft = dist;
+
+  if(AR.step === 1){
+    // Mark bottom
+    AR.bottomAngle = AR.currentPitch;
+    AR.step = 2;
+    // Visual feedback
+    drawMarkLine('bottom', AR.currentPitch);
+    arUpdateUI();
+  }
+  else if(AR.step === 2){
+    // Mark top
+    AR.topAngle = AR.currentPitch;
+    // Calculate height
+    const h = angDiffToInches(AR.bottomAngle, AR.topAngle, AR.dist_ft);
+    AR.heightResult_in = Math.round(h * 4) / 4; // round to 0.25"
+    AR.step = 3;
+    drawMarkLine('top', AR.currentPitch);
+    // Show result
+    showARResult(`H: ${AR.heightResult_in}" (${(AR.heightResult_in/12).toFixed(2)}ft)`);
+    arUpdateUI();
+  }
+  else if(AR.step === 3){
+    // Mark left edge of width
+    AR.leftAngle = AR.currentRoll;
+    AR.step = 4; // next: mark right
+    arUpdateUI();
+  }
+  else if(AR.step === 4){
+    // Calculate width from roll angles
+    AR.rightAngle = AR.currentRoll;
+    const w = angDiffToInches(AR.leftAngle, AR.rightAngle, AR.dist_ft);
+    AR.widthResult_in = Math.round(w * 4) / 4;
+
+    // Apply to window
+    applyARMeasurement();
+  }
+}
+
+function drawMarkLine(which, angle){
+  const canvas = document.getElementById('ar-canvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+  const cx = canvas.width/2;
+  const cy = canvas.height/2;
+
+  // Draw horizontal line at crosshair position
+  ctx.save();
+  ctx.strokeStyle = which==='bottom' ? '#00E599' : '#FF4560';
+  ctx.lineWidth = 3;
+  ctx.setLineDash([8,4]);
+  ctx.beginPath();
+  ctx.moveTo(0, cy);
+  ctx.lineTo(canvas.width, cy);
+  ctx.stroke();
+  // Label
+  ctx.fillStyle = which==='bottom' ? '#00E599' : '#FF4560';
+  ctx.font = 'bold 12px IBM Plex Mono';
+  ctx.fillText(which.toUpperCase() + ' (' + Math.round(angle) + '°)', 10, which==='bottom'?cy+18:cy-8);
+  ctx.restore();
+}
+
+function showARResult(text){
+  const el = document.getElementById('ar-result');
+  const val = document.getElementById('ar-result-val');
+  if(el) el.style.display = 'block';
+  if(val) val.textContent = text;
+}
+
+function applyARMeasurement(){
+  const room = D.rooms.find(r=>r.id===AR.roomId);
+  const win  = room?.windows.find(w=>w.id===AR.winId);
+  if(!win){ closeAR(); return; }
+
+  // Apply measured values
+  if(AR.heightResult_in > 0) win.height_in = AR.heightResult_in;
+  if(AR.widthResult_in > 0)  win.width_in  = AR.widthResult_in;
+
+  const summary = `Height: ${AR.heightResult_in}" · Width: ${AR.widthResult_in||'?'}"`;
+  showARResult('✅ ' + summary);
+
+  const btn = document.getElementById('ar-action-btn');
+  if(btn){
+    btn.textContent = 'APPLIED! Close';
+    btn.style.background = 'rgba(0,229,153,.3)';
+    btn.style.borderColor = '#00E599';
+    btn.style.color = '#00E599';
+    btn.onclick = () => { closeAR(); renderRooms(); };
+  }
+
+  // Update step 4
+  const s4 = document.getElementById('ar-step4');
+  if(s4){s4.style.background='rgba(0,229,153,.2)';s4.style.borderColor='rgba(0,229,153,.4)';s4.style.color='#00E599';}
+}
+
+function arReset(){
+  AR.step=1; AR.bottomAngle=AR.topAngle=AR.leftAngle=AR.rightAngle=null;
+  AR.heightResult_in=AR.widthResult_in=null;
+  // Clear canvas
+  const canvas=document.getElementById('ar-canvas');
+  if(canvas){const ctx=canvas.getContext('2d');ctx.clearRect(0,0,canvas.width,canvas.height);}
+  // Hide result
+  const el=document.getElementById('ar-result');
+  if(el) el.style.display='none';
+  arUpdateUI();
+}
+
+function arUpdateUI(){
+  const step = AR.step;
+  const instructions = [
+    '',
+    '📱 Point at the <b>BOTTOM EDGE</b> of the window. Align crosshair → tap MARK BOTTOM',
+    '📱 Tilt up to the <b>TOP EDGE</b> of the window. Align crosshair → tap MARK TOP',
+    '📱 Pan left to the <b>LEFT EDGE</b> of the window. Align crosshair → tap MARK LEFT',
+    '📱 Pan right to the <b>RIGHT EDGE</b> of the window. Align crosshair → tap MARK RIGHT',
+  ];
+  const btnLabels = ['','MARK BOTTOM','MARK TOP','MARK LEFT EDGE','MARK RIGHT EDGE'];
+  const btnColors = ['','#00C8FF','#FF4560','#FFB020','#9D5CF6'];
+
+  const inst = document.getElementById('ar-instruction');
+  if(inst) inst.querySelector('div').innerHTML = instructions[step]||'';
+
+  const btn = document.getElementById('ar-action-btn');
+  if(btn){
+    btn.textContent = btnLabels[step]||'';
+    btn.style.borderColor = btnColors[step]||'#00C8FF';
+    btn.style.color = btnColors[step]||'#00C8FF';
+    btn.style.background = (btnColors[step]||'#00C8FF').replace('#','rgba(').split('(')[1]?
+      `rgba(${parseInt((btnColors[step]||'#00C8FF').slice(1,3),16)},${parseInt((btnColors[step]||'#00C8FF').slice(3,5),16)},${parseInt((btnColors[step]||'#00C8FF').slice(5,7),16)},0.2)`:
+      'rgba(0,200,255,.2)';
+  }
+
+  // Step indicators
+  [1,2,3,4].forEach(i=>{
+    const el=document.getElementById('ar-step'+i);
+    if(!el) return;
+    if(i<step){el.style.background='rgba(0,229,153,.15)';el.style.borderColor='rgba(0,229,153,.4)';el.style.color='#00E599';}
+    else if(i===step){el.style.background='rgba(0,200,255,.2)';el.style.borderColor='rgba(0,200,255,.4)';el.style.color='#00C8FF';}
+    else{el.style.background='rgba(255,255,255,.03)';el.style.borderColor='rgba(255,255,255,.08)';el.style.color='rgba(255,255,255,.25)';}
+  });
+}
+
+// ══ INIT ══
+$('p_date').value=new Date().toISOString().slice(0,10);
+updateSidebar();
+// Auto-load from localStorage
+const saved=localStorage.getItem('sfm_project');
+if(saved){try{const d=JSON.parse(saved);if(d?.rooms?.length){if(confirm('Resume saved project: '+(d.job?.name||d.job?.num||'Project')+'?')){D=d;if($('p_num'))$('p_num').value=D.job?.num||'';if($('p_date'))$('p_date').value=D.job?.date||'';if($('p_name'))$('p_name').value=D.job?.name||'';if($('p_msr'))$('p_msr').value=D.job?.measurer||'';if($('c_name'))$('c_name').value=D.client?.name||'';if($('c_phone'))$('c_phone').value=D.client?.phone||'';if($('c_email'))$('c_email').value=D.client?.email||'';if($('c_note'))$('c_note').value=D.client?.note||'';document.querySelectorAll('#proj-film-sel .film-opt').forEach(b=>{b.classList.toggle('on',b.dataset.film===D.defaultFilm);});renderRooms();renderPhotos();updateSidebar();}}}catch(e){}}
+</script>
+
+<!-- ══ AR MEASURE MODAL ══ -->
+<div id="ar-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:#000;flex-direction:column">
+
+  <!-- AR Header -->
+  <div style="position:absolute;top:0;left:0;right:0;z-index:10;background:linear-gradient(to bottom,rgba(0,0,0,.8),transparent);padding:14px 16px">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div style="font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;letter-spacing:2px;color:#00C8FF">AR MEASURE</div>
+      <button onclick="closeAR()" style="background:rgba(255,255,255,.15);border:none;color:#fff;font-size:18px;width:34px;height:34px;border-radius:50%;cursor:pointer">✕</button>
+    </div>
+  </div>
+
+  <!-- Camera feed -->
+  <video id="ar-video" autoplay playsinline muted style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"></video>
+
+  <!-- Overlay canvas -->
+  <canvas id="ar-canvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none"></canvas>
+
+  <!-- Crosshair -->
+  <div id="ar-crosshair" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none">
+    <svg width="60" height="60" viewBox="0 0 60 60">
+      <circle cx="30" cy="30" r="2" fill="#00C8FF"/>
+      <line x1="30" y1="0" x2="30" y2="18" stroke="#00C8FF" stroke-width="2"/>
+      <line x1="30" y1="42" x2="30" y2="60" stroke="#00C8FF" stroke-width="2"/>
+      <line x1="0" y1="30" x2="18" y2="30" stroke="#00C8FF" stroke-width="2"/>
+      <line x1="42" y1="30" x2="60" y2="30" stroke="#00C8FF" stroke-width="2"/>
+    </svg>
+  </div>
+
+  <!-- Distance input -->
+  <div style="position:absolute;top:70px;left:0;right:0;display:flex;justify-content:center;z-index:10">
+    <div style="background:rgba(0,0,0,.7);border:1px solid rgba(0,200,255,.3);border-radius:10px;padding:10px 16px;display:flex;align-items:center;gap:10px">
+      <span style="font-size:11px;color:rgba(255,255,255,.6)">Distance to window:</span>
+      <input id="ar-dist" type="number" value="10" step="0.5" min="1"
+        style="width:60px;background:rgba(255,255,255,.1);border:1px solid rgba(0,200,255,.4);border-radius:5px;padding:4px 8px;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;text-align:center">
+      <span style="font-size:11px;color:rgba(255,255,255,.6)">ft</span>
+    </div>
+  </div>
+
+  <!-- Instructions / status -->
+  <div id="ar-instruction" style="position:absolute;top:130px;left:0;right:0;text-align:center;z-index:10;pointer-events:none">
+    <div style="display:inline-block;background:rgba(0,0,0,.65);border-radius:8px;padding:8px 16px;font-size:12px;color:rgba(255,255,255,.85);line-height:1.5"></div>
+  </div>
+
+  <!-- Live tilt display -->
+  <div id="ar-tilt-display" style="position:absolute;top:50%;right:16px;transform:translateY(-50%);z-index:10;pointer-events:none">
+    <div style="background:rgba(0,0,0,.6);border:1px solid rgba(0,200,255,.2);border-radius:8px;padding:8px 12px;text-align:center">
+      <div style="font-size:9px;color:rgba(0,200,255,.6);font-family:'IBM Plex Mono',monospace;margin-bottom:3px">TILT</div>
+      <div id="ar-tilt-val" style="font-size:18px;font-weight:700;color:#00C8FF;font-family:'IBM Plex Mono',monospace">0°</div>
+    </div>
+  </div>
+
+  <!-- Measure line overlay (shown after bottom marked) -->
+  <div id="ar-line-overlay" style="display:none;position:absolute;left:50%;transform:translateX(-50%);pointer-events:none;z-index:9">
+    <div id="ar-line-bottom" style="width:3px;background:#00E599;position:absolute;left:0"></div>
+    <div id="ar-line-top" style="width:3px;background:#FF4560;position:absolute;left:0"></div>
+  </div>
+
+  <!-- Bottom controls -->
+  <div style="position:absolute;bottom:0;left:0;right:0;z-index:10;background:linear-gradient(to top,rgba(0,0,0,.9),transparent);padding:20px 16px 30px">
+
+    <!-- Step indicators -->
+    <div style="display:flex;justify-content:center;gap:8px;margin-bottom:14px" id="ar-steps">
+      <div id="ar-step1" style="padding:5px 12px;border-radius:20px;font-size:10px;font-weight:700;font-family:'IBM Plex Mono',monospace;background:rgba(0,200,255,.2);border:1px solid rgba(0,200,255,.4);color:#00C8FF">1 BOTTOM</div>
+      <div id="ar-step2" style="padding:5px 12px;border-radius:20px;font-size:10px;font-weight:700;font-family:'IBM Plex Mono',monospace;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.3)">2 TOP</div>
+      <div id="ar-step3" style="padding:5px 12px;border-radius:20px;font-size:10px;font-weight:700;font-family:'IBM Plex Mono',monospace;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.3)">3 WIDTH</div>
+      <div id="ar-step4" style="padding:5px 12px;border-radius:20px;font-size:10px;font-weight:700;font-family:'IBM Plex Mono',monospace;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.3)">4 APPLY</div>
+    </div>
+
+    <!-- Result display -->
+    <div id="ar-result" style="display:none;text-align:center;margin-bottom:12px">
+      <div style="font-size:11px;color:rgba(255,255,255,.5);margin-bottom:4px">Measured</div>
+      <div style="font-size:26px;font-weight:800;font-family:'IBM Plex Mono',monospace;color:#00C8FF" id="ar-result-val">—</div>
+    </div>
+
+    <!-- Action button -->
+    <button id="ar-action-btn" onclick="arAction()"
+      style="width:100%;padding:16px;border-radius:12px;border:2px solid #00C8FF;background:rgba(0,200,255,.2);color:#00C8FF;font-size:15px;font-weight:800;cursor:pointer;font-family:'Rajdhani',sans-serif;letter-spacing:2px;transition:all .2s">
+      MARK BOTTOM
+    </button>
+
+    <button onclick="arReset()" style="width:100%;margin-top:8px;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,.1);background:transparent;color:rgba(255,255,255,.4);font-size:11px;cursor:pointer">
+      Reset Measurement
+    </button>
+  </div>
+</div>
+
+
+<!-- PWA INSTALL BANNER -->
+<div id="pwa-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:99998;background:linear-gradient(135deg,#0F1319,#161C26);border-top:1px solid rgba(0,200,255,.3);padding:14px 16px;box-shadow:0 -4px 20px rgba(0,0,0,.5)">
+  <div style="display:flex;align-items:center;gap:12px;max-width:600px;margin:0 auto">
+    <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#00C8FF,#0066CC);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0">📐</div>
+    <div style="flex:1">
+      <div style="font-size:13px;font-weight:700;color:#fff">Add to Home Screen</div>
+      <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:1px">Install SF Measurer for offline use</div>
+    </div>
+    <button id="pwa-install-btn" style="background:var(--accent);border:none;color:#000;font-weight:800;font-size:12px;padding:8px 16px;border-radius:7px;cursor:pointer;white-space:nowrap">Install</button>
+    <button onclick="document.getElementById('pwa-banner').style.display='none';localStorage.setItem('pwa-dismissed','1')"
+      style="background:none;border:none;color:rgba(255,255,255,.4);font-size:18px;cursor:pointer;padding:4px">✕</button>
+  </div>
+</div>
+
+<!-- IOS INSTALL GUIDE (shown when needed) -->
+<div id="ios-guide" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);justify-content:flex-end;align-items:flex-end">
+  <div style="background:#161C26;border-top:1px solid rgba(0,200,255,.3);border-radius:20px 20px 0 0;padding:24px 20px 36px;width:100%;max-width:480px;margin:0 auto">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+      <div style="font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;letter-spacing:1px;color:#00C8FF">INSTALL SF MEASURE</div>
+      <button onclick="document.getElementById('ios-guide').style.display='none'" style="background:rgba(255,255,255,.1);border:none;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:16px">✕</button>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;align-items:center;gap:14px">
+        <div style="width:42px;height:42px;border-radius:10px;background:rgba(0,200,255,.15);border:1px solid rgba(0,200,255,.3);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">1</div>
+        <div>
+          <div style="font-size:13px;font-weight:600;color:#fff">Tap the Share button</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.45);margin-top:2px">Tap <strong style="color:#00C8FF">⬆ Share</strong> at the bottom of Safari (or top on iPad)</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <div style="width:42px;height:42px;border-radius:10px;background:rgba(0,200,255,.15);border:1px solid rgba(0,200,255,.3);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">2</div>
+        <div>
+          <div style="font-size:13px;font-weight:600;color:#fff">Add to Home Screen</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.45);margin-top:2px">Scroll down and tap <strong style="color:#00C8FF">Add to Home Screen</strong></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <div style="width:42px;height:42px;border-radius:10px;background:rgba(0,200,255,.15);border:1px solid rgba(0,200,255,.3);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">3</div>
+        <div>
+          <div style="font-size:13px;font-weight:600;color:#fff">Tap Add</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.45);margin-top:2px">SF Measure icon will appear on your Home Screen</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:20px;padding:12px;background:rgba(0,200,255,.06);border-radius:8px;font-size:11px;color:rgba(0,200,255,.7);text-align:center">
+      Works offline · No app store needed · Free forever
+    </div>
+    <!-- Arrow pointing down to Safari bar -->
+    <div style="text-align:center;margin-top:10px;font-size:28px;animation:bounce 1s infinite">⬇️</div>
+  </div>
+</div>
+
+<style>
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+</style>
+
+<script>
+// ══ PWA INSTALL ══
+let deferredPrompt = null;
+
+// Android/Chrome — capture install prompt
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  if(!localStorage.getItem('pwa-dismissed')){
+    document.getElementById('pwa-banner').style.display = 'block';
+  }
+});
+
+document.getElementById('pwa-install-btn').addEventListener('click', async () => {
+  if(deferredPrompt){
+    deferredPrompt.prompt();
+    const result = await deferredPrompt.userChoice;
+    deferredPrompt = null;
+    document.getElementById('pwa-banner').style.display = 'none';
+  }
+});
+
+// iOS Safari — show manual guide
+function isIOS(){ return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream; }
+function isInStandaloneMode(){ return ('standalone' in window.navigator) && window.navigator.standalone; }
+
+if(isIOS() && !isInStandaloneMode() && !localStorage.getItem('pwa-dismissed')){
+  // Show install button in header instead
+  const btn = document.createElement('button');
+  btn.className = 'btn bsm ba';
+  btn.innerHTML = '📲 Install';
+  btn.onclick = () => { document.getElementById('ios-guide').style.display = 'flex'; };
+  document.querySelector('.hdr-right').prepend(btn);
+}
+
+// Service Worker for offline support
+if('serviceWorker' in navigator){
+  const swCode = `
+    const CACHE = 'sfm-v1';
+    const FILES = [location.href];
+    self.addEventListener('install', e => {
+      e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)));
+      self.skipWaiting();
+    });
+    self.addEventListener('fetch', e => {
+      e.respondWith(caches.match(e.request).then(r => r || fetch(e.request).catch(() => caches.match(e.request))));
+    });
+  `;
+  const blob = new Blob([swCode], {type:'application/javascript'});
+  const swUrl = URL.createObjectURL(blob);
+  navigator.serviceWorker.register(swUrl).then(() => {
+    console.log('SW registered — offline mode active');
+  }).catch(e => console.log('SW:', e));
+}
+
+// Add install button to header always visible
+const hdrInstallBtn = document.createElement('button');
+hdrInstallBtn.className = 'btn bsm';
+hdrInstallBtn.style.cssText = 'border-color:rgba(0,200,255,.3);color:rgba(0,200,255,.7);font-size:10px';
+hdrInstallBtn.innerHTML = '📲';
+hdrInstallBtn.title = 'Install App';
+hdrInstallBtn.onclick = () => {
+  if(deferredPrompt){ deferredPrompt.prompt(); }
+  else if(isIOS()){ document.getElementById('ios-guide').style.display='flex'; }
+  else { alert('To install:\n\nChrome: Menu → Add to Home Screen\nSafari: Share → Add to Home Screen'); }
+};
+document.querySelector('.hdr-right').prepend(hdrInstallBtn);
+</script>
+</body>
+</html>

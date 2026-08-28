@@ -13,7 +13,7 @@
 (async()=>{
  try{
   const names=['part1.txt','part2.txt','part3.txt','part4.txt'];
-  const pieces=await Promise.all(names.map(n=>fetch('./'+n+'?v=13',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('Не найден '+n);return r.text()})));
+  const pieces=await Promise.all(names.map(n=>fetch('./'+n+'?v=14',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('Не найден '+n);return r.text()})));
   const b64=pieces.join('').replace(/\s+/g,'');
   const bin=atob(b64); const bytes=new Uint8Array(bin.length); for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
   let html='';

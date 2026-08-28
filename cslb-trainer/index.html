@@ -5,21 +5,30 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#111827">
 <title>CSLB Law & Business Trainer</title>
-<style>body{margin:0;background:#0b0f17;color:#f8fafc;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;display:grid;place-items:center;min-height:100vh}.box{max-width:420px;padding:28px;text-align:center}.spin{width:42px;height:42px;border:4px solid #273247;border-top-color:#f59e0b;border-radius:50%;margin:0 auto 18px;animation:s 1s linear infinite}@keyframes s{to{transform:rotate(360deg)}}small{color:#94a3b8;line-height:1.5}</style>
+<style>body{margin:0;background:#0b0f17;color:#f8fafc;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;display:grid;place-items:center;min-height:100vh}.box{max-width:420px;padding:28px;text-align:center}.spin{width:42px;height:42px;border:4px solid #273247;border-top-color:#f59e0b;border-radius:50%;margin:0 auto 18px;animation:s 1s linear infinite}@keyframes s{to{transform:rotate(360deg)}}small{color:#94a3b8;line-height:1.5}.btn{display:inline-block;margin-top:16px;padding:12px 16px;border-radius:12px;border:1px solid #334155;background:#172033;color:#fff;font-weight:700;text-decoration:none}</style>
+<script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
 </head>
 <body><div class="box"><div class="spin"></div><h2>CSLB Trainer</h2><small id="msg">Загружаю тренажёр v1.2…</small></div>
 <script>
 (async()=>{
  try{
   const names=['part1.txt','part2.txt','part3.txt','part4.txt'];
-  const pieces=await Promise.all(names.map(n=>fetch('./'+n,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(n);return r.text()})));
+  const pieces=await Promise.all(names.map(n=>fetch('./'+n+'?v=12',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('Не найден '+n);return r.text()})));
   const b64=pieces.join('').replace(/\s+/g,'');
   const bin=atob(b64); const bytes=new Uint8Array(bin.length); for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
-  const ds=new DecompressionStream('gzip');
-  const html=await new Response(new Blob([bytes]).stream().pipeThrough(ds)).text();
+  let html='';
+  if('DecompressionStream' in window){
+    const ds=new DecompressionStream('gzip');
+    html=await new Response(new Blob([bytes]).stream().pipeThrough(ds)).text();
+  } else if(window.pako){
+    html=window.pako.ungzip(bytes,{to:'string'});
+  } else {
+    throw new Error('Ваш браузер не поддерживает распаковку. Откройте ссылку в Safari.');
+  }
   document.open(); document.write(html); document.close();
  }catch(e){
-  document.getElementById('msg').innerHTML='Не удалось запустить приложение. Обновите страницу в Safari. Если ошибка повторится — сообщите мне.<br><br>'+String(e);
+  const m=document.getElementById('msg');
+  m.innerHTML='Не удалось запустить приложение.<br><br><b>'+String(e)+'</b><br><br>Откройте эту страницу именно в Safari и обновите её.';
  }
 })();
 </script></body></html>

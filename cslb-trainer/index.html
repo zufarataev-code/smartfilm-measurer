@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111827">
+<title>CSLB Law & Business Trainer</title>
+<style>body{margin:0;background:#0b0f17;color:#f8fafc;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;display:grid;place-items:center;min-height:100vh}.box{max-width:420px;padding:28px;text-align:center}.spin{width:42px;height:42px;border:4px solid #273247;border-top-color:#f59e0b;border-radius:50%;margin:0 auto 18px;animation:s 1s linear infinite}@keyframes s{to{transform:rotate(360deg)}}small{color:#94a3b8;line-height:1.5}</style>
+</head>
+<body><div class="box"><div class="spin"></div><h2>CSLB Trainer</h2><small id="msg">Загружаю тренажёр…</small></div>
+<script>
+(async()=>{
+ try{
+  const names=['part1.txt','part2.txt','part3.txt'];
+  const pieces=await Promise.all(names.map(n=>fetch('./'+n,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(n);return r.text()})));
+  const b64=pieces.join('').replace(/\s+/g,'');
+  const bin=atob(b64); const bytes=new Uint8Array(bin.length); for(let i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
+  const ds=new DecompressionStream('gzip');
+  const html=await new Response(new Blob([bytes]).stream().pipeThrough(ds)).text();
+  document.open(); document.write(html); document.close();
+ }catch(e){
+  document.getElementById('msg').innerHTML='Не удалось запустить приложение. Обновите страницу в Safari. Если ошибка повторится — сообщите мне.<br><br>'+String(e);
+ }
+})();
+</script></body></html>
